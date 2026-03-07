@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    
+    <!-- AndroidX Core -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Core KTX
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.core/core.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- AndroidX AppCompat -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX AppCompat
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.appcompat/appcompat.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Google Material -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Google Material Components
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.google\.android\.material/material.*$</packageUrl>
+        <cpe>cpe:/a:google:material_design</cpe>
+    </suppress>
+    
+    <!-- Kotlin -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Kotlin Standard Library
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jetbrains\.kotlin/.*$</packageUrl>
+        <cpe>cpe:/a:jetbrains:kotlin</cpe>
+    </suppress>
+    
+    <!-- KotlinX Coroutines -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: KotlinX Coroutines
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jetbrains\.kotlinx/kotlinx-coroutines.*$</packageUrl>
+        <cpe>cpe:/a:jetbrains:kotlin</cpe>
+    </suppress>
+    
+    <!-- Dagger Hilt -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Dagger Hilt
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.google\.dagger/hilt.*$</packageUrl>
+        <cpe>cpe:/a:google:dagger</cpe>
+    </suppress>
+    
+    <!-- Room -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Room
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.room/room.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Retrofit -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Retrofit
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.squareup\.retrofit2/retrofit.*$</packageUrl>
+        <cpe>cpe:/a:squareup:retrofit</cpe>
+    </suppress>
+    
+    <!-- OkHttp -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: OkHttp
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.squareup\.okhttp3/okhttp.*$</packageUrl>
+        <cpe>cpe:/a:squareup:okhttp</cpe>
+    </suppress>
+    
+    <!-- Glide -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Glide
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.github\.bumptech\.glide/glide.*$</packageUrl>
+        <cpe>cpe:/a:bumptech:glide</cpe>
+    </suppress>
+    
+    <!-- Coil -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Coil
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.coil-kt/coil.*$</packageUrl>
+        <cpe>cpe:/a:coil:coil</cpe>
+    </suppress>
+    
+    <!-- Lifecycle -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Lifecycle
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.lifecycle/lifecycle.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Navigation -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Navigation
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.navigation/navigation.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- WorkManager -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX WorkManager
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.work/work.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Paging -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Paging
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.paging/paging.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- ExoPlayer -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: ExoPlayer
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.google\.android\.exoplayer/exoplayer.*$</packageUrl>
+        <cpe>cpe:/a:google:exoplayer</cpe>
+    </suppress>
+    
+    <!-- Biometric -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Biometric
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.biometric/biometric.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Security Crypto -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Security Crypto
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.security/security-crypto.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Play Services -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Google Play Services
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.google\.android\.gms/play-services.*$</packageUrl>
+        <cpe>cpe:/a:google:play_services</cpe>
+    </suppress>
+    
+    <!-- Firebase -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Firebase
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.google\.firebase/firebase.*$</packageUrl>
+        <cpe>cpe:/a:google:firebase</cpe>
+    </suppress>
+    
+    <!-- ThreeTenABP -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: ThreeTenABP (backport of java.time)
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.jakewharton\.threetenabp/threetenabp.*$</packageUrl>
+        <cpe>cpe:/a:threeten:threetenbp</cpe>
+    </suppress>
+    
+    <!-- Lottie -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Lottie
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.airbnb\.android/lottie.*$</packageUrl>
+        <cpe>cpe:/a:airbnb:lottie</cpe>
+    </suppress>
+    
+    <!-- PhotoView -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: PhotoView
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.github\.chrisbanes/photoview.*$</packageUrl>
+        <cpe>cpe:/a:photoview_project:photoview</cpe>
+    </suppress>
+    
+    <!-- PDF Viewer -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Android PDF Viewer
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.github\.barteksc/android-pdf-viewer.*$</packageUrl>
+        <cpe>cpe:/a:android-pdf-viewer_project:android-pdf-viewer</cpe>
+    </suppress>
+    
+    <!-- DocumentFile -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX DocumentFile
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.documentfile/documentfile.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Preference -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: AndroidX Preference
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.preference/preference.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Compose -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Jetpack Compose
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.compose.*/.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- Hilt Navigation Compose -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Hilt Navigation Compose
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/androidx\.hilt/hilt-navigation-compose.*$</packageUrl>
+        <cpe>cpe:/a:google:android</cpe>
+    </suppress>
+    
+    <!-- OS Licenses -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: Play Services OS Licenses
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.google\.android\.gms/play-services-oss-licenses.*$</packageUrl>
+        <cpe>cpe:/a:google:play_services</cpe>
+    </suppress>
+    
+    <!-- TouchImageView -->
+    <suppress>
+        <notes><![CDATA[
+        False positive: TouchImageView
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.github\.MikeOrtiz/TouchImageView.*$</packageUrl>
+        <cpe>cpe:/a:touchimageview_project:touchimageview</cpe>
+    </suppress>
+    
+</suppressions>
