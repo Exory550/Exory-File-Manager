@@ -426,7 +426,7 @@
     <string name="no_email_app_found">No email app found</string>
 
     <!-- File operations messages -->
-    <string name="loading">Loading...</string>
+    
     <string name="creating">Creating...</string>
     <string name="deleting">Deleting...</string>
     <string name="renaming">Renaming...</string>
