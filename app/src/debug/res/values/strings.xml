@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Exory File Manager (Debug)</string>
+    <string name="build_type">Debug Build</string>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_vector"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_new_folder"
+        android:icon="@drawable/ic_create_new_folder"
+        android:title="@string/new_folder"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort_vector"
+        android:title="@string/sort"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_view_mode"
+        android:icon="@drawable/ic_view_mode_vector"
+        android:title="@string/view_mode"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_vector"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/ic_info_vector"
+        android:title="@string/about"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_favorites"
+        android:icon="@drawable/ic_star_on_vector"
+        android:title="@string/favorites"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_recent"
+        android:icon="@drawable/ic_history_vector"
+        android:title="@string/recent"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_storage_analyzer"
+        android:icon="@drawable/ic_storage_vector"
+        android:title="@string/storage_analyzer"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dark theme -->
+    <style name="Theme.ExoryFileManager" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/color_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/color_accent</item>
+        <item name="colorSecondaryVariant">@color/color_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorOnSurface">@color/text_primary_dark</item>
+        <item name="colorBackground">@color/background_dark</item>
+        <item name="colorOnBackground">@color/text_primary_dark</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Custom attributes -->
+        <item name="backgroundColor">?attr/colorBackground</item>
+        <item name="surfaceColor">?attr/colorSurface</item>
+        <item name="textColorPrimary">?attr/colorOnBackground</item>
+        <item name="textColorSecondary">@color/text_secondary_dark</item>
+        <item name="textColorDisabled">@color/text_disabled_dark</item>
+        <item name="dividerColor">@color/divider_dark</item>
+        <item name="borderColor">@color/border_dark</item>
+        <item name="iconTint">@color/icon_tint_dark</item>
+        <item name="iconTintInverse">@color/icon_tint</item>
+        <item name="windowLightStatusBar">false</item>
+        <item name="windowLightNavigationBar">false</item>
+    </style>
+
+</resources>

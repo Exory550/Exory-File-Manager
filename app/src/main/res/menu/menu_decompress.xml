@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_extract_all"
+        android:icon="@drawable/ic_extract_vector"
+        android:title="@string/extract_all"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_extract_selected"
+        android:icon="@drawable/ic_extract_vector"
+        android:title="@string/extract_selected"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_select_all"
+        android:icon="@drawable/ic_select_all_vector"
+        android:title="@string/select_all"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_clear_selection"
+        android:icon="@drawable/ic_close_vector"
+        android:title="@string/clear_selection"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/ic_info_vector"
+        android:title="@string/info"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_vector"
+        android:title="@string/search"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort_vector"
+        android:title="@string/sort"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_view_mode"
+        android:icon="@drawable/ic_view_mode_vector"
+        android:title="@string/view_mode"
+        app:showAsAction="never" />
+
+</menu>

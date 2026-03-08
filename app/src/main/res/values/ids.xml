@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation drawer items -->
+    <item name="nav_home" type="id" />
+    <item name="nav_downloads" type="id" />
+    <item name="nav_documents" type="id" />
+    <item name="nav_pictures" type="id" />
+    <item name="nav_music" type="id" />
+    <item name="nav_movies" type="id" />
+    <item name="nav_favorites" type="id" />
+    <item name="nav_recent" type="id" />
+    <item name="nav_storage_analyzer" type="id" />
+    <item name="nav_settings" type="id" />
+    <item name="nav_about" type="id" />
+    <item name="nav_rate" type="id" />
+    <item name="nav_share" type="id" />
+    <item name="nav_feedback" type="id" />
+
+    <!-- Storage items -->
+    <item name="storage_internal" type="id" />
+    <item name="storage_external" type="id" />
+    <item name="storage_usb" type="id" />
+    <item name="storage_cloud" type="id" />
+
+    <!-- View modes -->
+    <item name="view_mode_list" type="id" />
+    <item name="view_mode_grid" type="id" />
+    <item name="view_mode_detailed" type="id" />
+
+    <!-- Sort modes -->
+    <item name="sort_name" type="id" />
+    <item name="sort_size" type="id" />
+    <item name="sort_date" type="id" />
+    <item name="sort_type" type="id" />
+    <item name="sort_extension" type="id" />
+
+    <!-- Operations -->
+    <item name="operation_copy" type="id" />
+    <item name="operation_move" type="id" />
+    <item name="operation_delete" type="id" />
+    <item name="operation_rename" type="id" />
+    <item name="operation_extract" type="id" />
+    <item name="operation_compress" type="id" />
+    <item name="operation_share" type="id" />
+    <item name="operation_properties" type="id" />
+
+    <!-- Dialogs -->
+    <item name="dialog_create_folder" type="id" />
+    <item name="dialog_create_file" type="id" />
+    <item name="dialog_rename" type="id" />
+    <item name="dialog_properties" type="id" />
+    <item name="dialog_confirmation" type="id" />
+    <item name="dialog_progress" type="id" />
+    <item name="dialog_password" type="id" />
+    <item name="dialog_pin" type="id" />
+    <item name="dialog_pattern" type="id" />
+
+    <!-- Tutorial steps -->
+    <item name="tutorial_step_1" type="id" />
+    <item name="tutorial_step_2" type="id" />
+    <item name="tutorial_step_3" type="id" />
+    <item name="tutorial_step_4" type="id" />
+    <item name="tutorial_step_5" type="id" />
+
+    <!-- Animations -->
+    <item name="animation_fade_in" type="id" />
+    <item name="animation_fade_out" type="id" />
+    <item name="animation_slide_in_left" type="id" />
+    <item name="animation_slide_in_right" type="id" />
+    <item name="animation_slide_out_left" type="id" />
+    <item name="animation_slide_out_right" type="id" />
+    <item name="animation_pulse" type="id" />
+    <item name="animation_shake" type="id" />
+</resources>

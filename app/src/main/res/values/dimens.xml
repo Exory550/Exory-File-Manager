@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Font sizes -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_xxlarge">24sp</dimen>
+
+    <!-- Icon sizes -->
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_normal">24dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+    <dimen name="icon_size_large">40dp</dimen>
+    <dimen name="icon_size_xlarge">48dp</dimen>
+    <dimen name="icon_size_xxlarge">64dp</dimen>
+    <dimen name="icon_size_xxxlarge">96dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_tiny">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_normal">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xlarge">24dp</dimen>
+    <dimen name="padding_xxlarge">32dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_normal">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_xlarge">24dp</dimen>
+    <dimen name="margin_xxlarge">32dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_none">0dp</dimen>
+    <dimen name="elevation_tiny">1dp</dimen>
+    <dimen name="elevation_small">2dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_normal">6dp</dimen>
+    <dimen name="elevation_large">8dp</dimen>
+    <dimen name="elevation_xlarge">12dp</dimen>
+
+    <!-- Corner radius -->
+    <dimen name="radius_tiny">2dp</dimen>
+    <dimen name="radius_small">4dp</dimen>
+    <dimen name="radius_normal">8dp</dimen>
+    <dimen name="radius_large">12dp</dimen>
+    <dimen name="radius_xlarge">16dp</dimen>
+    <dimen name="radius_circle">100dp</dimen>
+
+    <!-- Fast scroller -->
+    <dimen name="fast_scroller_thumb_width">8dp</dimen>
+    <dimen name="fast_scroller_thumb_height">48dp</dimen>
+    <dimen name="fast_scroller_track_width">4dp</dimen>
+    <dimen name="fast_scroller_bubble_width">48dp</dimen>
+    <dimen name="fast_scroller_bubble_height">32dp</dimen>
+
+    <!-- Bottom sheet -->
+    <dimen name="bottom_sheet_peek_height">64dp</dimen>
+    <dimen name="bottom_sheet_max_height">400dp</dimen>
+
+    <!-- Navigation drawer -->
+    <dimen name="navigation_drawer_width">280dp</dimen>
+    <dimen name="navigation_header_height">168dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <!-- Fab -->
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Card -->
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dialog_corner_radius">8dp</dimen>
+    <dimen name="dialog_margin">24dp</dimen>
+    <dimen name="dialog_max_width">400dp</dimen>
+
+    <!-- Progress bar -->
+    <dimen name="progress_bar_height">4dp</dimen>
+    <dimen name="progress_bar_width">match_parent</dimen>
+
+    <!-- Thumbnail sizes -->
+    <dimen name="thumbnail_size_small">48dp</dimen>
+    <dimen name="thumbnail_size_medium">64dp</dimen>
+    <dimen name="thumbnail_size_large">96dp</dimen>
+    <dimen name="thumbnail_size_xlarge">128dp</dimen>
+</resources>

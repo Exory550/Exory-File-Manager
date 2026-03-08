@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Animation durations -->
+    <integer name="anim_duration_short">200</integer>
+    <integer name="anim_duration_medium">300</integer>
+    <integer name="anim_duration_long">500</integer>
+    <integer name="anim_duration_xlong">800</integer>
+
+    <!-- Thumbnail settings -->
+    <integer name="thumbnail_quality_low">10</integer>
+    <integer name="thumbnail_quality_medium">30</integer>
+    <integer name="thumbnail_quality_high">50</integer>
+    <integer name="thumbnail_quality_best">70</integer>
+
+    <integer name="thumbnail_size_small">64</integer>
+    <integer name="thumbnail_size_medium">128</integer>
+    <integer name="thumbnail_size_large">256</integer>
+    <integer name="thumbnail_size_xlarge">512</integer>
+
+    <integer name="thumbnail_cache_size_small">50</integer>
+    <integer name="thumbnail_cache_size_medium">100</integer>
+    <integer name="thumbnail_cache_size_large">200</integer>
+    <integer name="thumbnail_cache_size_xlarge">500</integer>
+
+    <!-- Clean intervals (days) -->
+    <integer name="clean_interval_daily">1</integer>
+    <integer name="clean_interval_weekly">7</integer>
+    <integer name="clean_interval_monthly">30</integer>
+
+    <!-- Lock timeouts (minutes) -->
+    <integer name="lock_timeout_immediately">0</integer>
+    <integer name="lock_timeout_30_seconds">30</integer>
+    <integer name="lock_timeout_1_minute">60</integer>
+    <integer name="lock_timeout_2_minutes">120</integer>
+    <integer name="lock_timeout_5_minutes">300</integer>
+    <integer name="lock_timeout_10_minutes">600</integer>
+    <integer name="lock_timeout_30_minutes">1800</integer>
+
+    <!-- Max items -->
+    <integer name="max_search_results">1000</integer>
+    <integer name="max_recent_files">50</integer>
+    <integer name="max_favorites">100</integer>
+    <integer name="max_bookmarks">50</integer>
+
+    <!-- Buffer sizes -->
+    <integer name="buffer_size">8192</integer>
+    <integer name="buffer_size_large">65536</integer>
+
+    <!-- Progress update interval (ms) -->
+    <integer name="progress_update_interval">500</integer>
+
+    <!-- Search debounce interval (ms) -->
+    <integer name="search_debounce_interval">500</integer>
+
+    <!-- Backup reminder interval (days) -->
+    <integer name="backup_reminder_interval">7</integer>
+
+    <!-- Max attempts -->
+    <integer name="max_password_attempts">5</integer>
+    <integer name="max_pin_attempts">5</integer>
+    <integer name="max_pattern_attempts">5</integer>
+    <integer name="max_biometric_attempts">3</integer>
+
+    <!-- Lockout durations (ms) -->
+    <integer name="lockout_duration">30000</integer>
+    <integer name="biometric_lockout_duration">30000</integer>
+
+    <!-- Password requirements -->
+    <integer name="password_min_length">6</integer>
+    <integer name="password_max_length">32</integer>
+    <integer name="pin_length">4</integer>
+    <integer name="pattern_min_points">4</integer>
+
+    <!-- Grid columns -->
+    <integer name="grid_columns_portrait">2</integer>
+    <integer name="grid_columns_landscape">3</integer>
+
+    <!-- Fast scroller -->
+    <integer name="fast_scroller_handle_height">48</integer>
+    <integer name="fast_scroller_handle_width">8</integer>
+
+    <!-- Max lines -->
+    <integer name="max_lines_single">1</integer>
+    <integer name="max_lines_preview">3</integer>
+    <integer name="max_lines_description">5</integer>
+
+    <!-- Opacity values -->
+    <integer name="opacity_disabled">128</integer>
+    <integer name="opacity_enabled">255</integer>
+    <integer name="opacity_selected">255</integer>
+</resources>

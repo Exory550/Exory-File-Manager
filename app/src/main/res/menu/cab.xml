@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_select_all"
+        android:icon="@drawable/ic_select_all_vector"
+        android:title="@string/select_all"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_clear_selection"
+        android:icon="@drawable/ic_close_vector"
+        android:title="@string/clear_selection"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_cut"
+        android:icon="@drawable/ic_cut_vector"
+        android:title="@string/cut"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_copy"
+        android:icon="@drawable/ic_copy_vector"
+        android:title="@string/copy"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_paste"
+        android:icon="@drawable/ic_paste_vector"
+        android:title="@string/paste"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@drawable/ic_delete_vector"
+        android:title="@string/delete"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_rename"
+        android:icon="@drawable/ic_edit_vector"
+        android:title="@string/rename"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_vector"
+        android:title="@string/share"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_compress"
+        android:icon="@drawable/ic_compress_vector"
+        android:title="@string/compress"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_extract"
+        android:icon="@drawable/ic_decompress_vector"
+        android:title="@string/extract"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_properties"
+        android:icon="@drawable/ic_info_vector"
+        android:title="@string/properties"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_add_to_favorites"
+        android:icon="@drawable/ic_star_off_vector"
+        android:title="@string/add_to_favorites"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_remove_from_favorites"
+        android:icon="@drawable/ic_star_on_vector"
+        android:title="@string/remove_from_favorites"
+        app:showAsAction="ifRoom" />
+
+</menu>

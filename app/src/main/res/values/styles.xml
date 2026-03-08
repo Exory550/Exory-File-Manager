@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="Theme.ExoryFileManager" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/color_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/color_accent</item>
+        <item name="colorSecondaryVariant">@color/color_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">?attr/windowLightStatusBar</item>
+        <item name="android:windowLightNavigationBar">?attr/windowLightNavigationBar</item>
+
+        <!-- Custom attributes -->
+        <item name="backgroundColor">?attr/colorBackground</item>
+        <item name="surfaceColor">?attr/colorSurface</item>
+        <item name="textColorPrimary">?attr/colorOnBackground</item>
+        <item name="textColorSecondary">@color/text_secondary</item>
+        <item name="textColorDisabled">@color/text_disabled</item>
+        <item name="dividerColor">@color/divider</item>
+        <item name="borderColor">@color/border</item>
+        <item name="iconTint">@color/icon_tint</item>
+        <item name="iconTintInverse">@color/icon_tint_dark</item>
+        <item name="windowLightStatusBar">true</item>
+        <item name="windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- Dark theme -->
+    <style name="Theme.ExoryFileManager.Dark" parent="Theme.ExoryFileManager">
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorOnSurface">@color/text_primary_dark</item>
+        <item name="colorBackground">@color/background_dark</item>
+        <item name="colorOnBackground">@color/text_primary_dark</item>
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="textColorSecondary">@color/text_secondary_dark</item>
+        <item name="textColorDisabled">@color/text_disabled_dark</item>
+        <item name="dividerColor">@color/divider_dark</item>
+        <item name="borderColor">@color/border_dark</item>
+        <item name="iconTint">@color/icon_tint_dark</item>
+        <item name="iconTintInverse">@color/icon_tint</item>
+        <item name="windowLightStatusBar">false</item>
+        <item name="windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="Theme.ExoryFileManager.Splash" parent="Theme.ExoryFileManager">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Full screen theme -->
+    <style name="Theme.ExoryFileManager.FullScreen" parent="Theme.ExoryFileManager">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- AppBar overlay theme -->
+    <style name="ThemeOverlay.ExoryFileManager.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <!-- Popup overlay theme -->
+    <style name="ThemeOverlay.ExoryFileManager.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <!-- Dialog theme -->
+    <style name="Theme.ExoryFileManager.Dialog" parent="Theme.Material3.Light.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/dialog_max_width</item>
+        <item name="android:windowMinWidthMinor">@dimen/dialog_max_width</item>
+    </style>
+
+    <!-- Full screen dialog theme -->
+    <style name="Theme.ExoryFileManager.Dialog.FullScreen" parent="Theme.Material3.Light.Dialog">
+        <item name="android:windowMinWidthMajor">match_parent</item>
+        <item name="android:windowMinWidthMinor">match_parent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="Widget.ExoryFileManager.Button" parent="Widget.Material3.Button">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="cornerRadius">@dimen/radius_small</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.ExoryFileManager.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">@dimen/radius_small</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.ExoryFileManager.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="cornerRadius">@dimen/radius_small</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.ExoryFileManager.Button.Small" parent="Widget.ExoryFileManager.Button">
+        <item name="android:minHeight">32dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingHorizontal">12dp</item>
+    </style>
+
+    <!-- FAB styles -->
+    <style name="Widget.ExoryFileManager.FloatingActionButton" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="tint">?attr/colorOnPrimary</item>
+    </style>
+
+    <!-- Card styles -->
+    <style name="Widget.ExoryFileManager.Card" parent="Widget.Material3.CardView">
+        <item name="cardCornerRadius">@dimen/radius_small</item>
+        <item name="cardElevation">@dimen/elevation_small</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="Text.ExoryFileManager.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">?attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.ExoryFileManager.Subtitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">?attr/textColorSecondary</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Text.ExoryFileManager.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">?attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="Text.ExoryFileManager.Caption" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">?attr/textColorSecondary</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!-- Toolbar styles -->
+    <style name="Widget.ExoryFileManager.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="titleTextColor">?attr/colorOnPrimary</item>
+        <item name="subtitleTextColor">?attr/colorOnPrimary</item>
+        <item name="navigationIconTint">?attr/colorOnPrimary</item>
+        <item name="menuTint">?attr/colorOnPrimary</item>
+    </style>
+
+    <!-- Tab layout styles -->
+    <style name="Widget.ExoryFileManager.TabLayout" parent="Widget.Material3.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorOnPrimary</item>
+        <item name="tabSelectedTextColor">?attr/colorOnPrimary</item>
+        <item name="tabTextColor">?attr/colorOnPrimary</item>
+        <item name="tabBackground">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Bottom sheet dialog theme -->
+    <style name="Theme.ExoryFileManager.BottomSheetDialog" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="bottomSheetStyle">@style/Widget.ExoryFileManager.BottomSheet</item>
+    </style>
+
+    <style name="Widget.ExoryFileManager.BottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+    </style>
+
+    <!-- Preference styles -->
+    <style name="Preference.ExoryFileManager" parent="PreferenceThemeOverlay.Material3">
+        <item name="android:iconSpaceReserved">false</item>
+        <item name="android:singleLineTitle">false</item>
+    </style>
+
+</resources>

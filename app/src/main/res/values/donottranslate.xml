@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App info - DO NOT TRANSLATE -->
+    <string name="app_name" translatable="false">Exory File Manager</string>
+    <string name="app_author" translatable="false">Exory550</string>
+    <string name="app_email" translatable="false">support@exory550.com</string>
+    <string name="app_website" translatable="false">https://exory550.com</string>
+    <string name="app_github" translatable="false">https://github.com/Exory550/ExoryFileManager</string>
+    <string name="app_play_store" translatable="false">https://play.google.com/store/apps/details?id=com.exory550.filemanager</string>
+
+    <!-- File extensions - DO NOT TRANSLATE -->
+    <string name="extension_apk" translatable="false">apk</string>
+    <string name="extension_pdf" translatable="false">pdf</string>
+    <string name="extension_zip" translatable="false">zip</string>
+    <string name="extension_rar" translatable="false">rar</string>
+    <string name="extension_7z" translatable="false">7z</string>
+    <string name="extension_tar" translatable="false">tar</string>
+    <string name="extension_gz" translatable="false">gz</string>
+    <string name="extension_txt" translatable="false">txt</string>
+    <string name="extension_md" translatable="false">md</string>
+    <string name="extension_json" translatable="false">json</string>
+    <string name="extension_xml" translatable="false">xml</string>
+    <string name="extension_html" translatable="false">html</string>
+    <string name="extension_css" translatable="false">css</string>
+    <string name="extension_js" translatable="false">js</string>
+    <string name="extension_java" translatable="false">java</string>
+    <string name="extension_kt" translatable="false">kt</string>
+    <string name="extension_kts" translatable="false">kts</string>
+    <string name="extension_py" translatable="false">py</string>
+    <string name="extension_cpp" translatable="false">cpp</string>
+    <string name="extension_c" translatable="false">c</string>
+    <string name="extension_h" translatable="false">h</string>
+    <string name="extension_jpg" translatable="false">jpg</string>
+    <string name="extension_jpeg" translatable="false">jpeg</string>
+    <string name="extension_png" translatable="false">png</string>
+    <string name="extension_gif" translatable="false">gif</string>
+    <string name="extension_bmp" translatable="false">bmp</string>
+    <string name="extension_webp" translatable="false">webp</string>
+    <string name="extension_mp4" translatable="false">mp4</string>
+    <string name="extension_mkv" translatable="false">mkv</string>
+    <string name="extension_avi" translatable="false">avi</string>
+    <string name="extension_mov" translatable="false">mov</string>
+    <string name="extension_mp3" translatable="false">mp3</string>
+    <string name="extension_wav" translatable="false">wav</string>
+    <string name="extension_ogg" translatable="false">ogg</string>
+    <string name="extension_flac" translatable="false">flac</string>
+    <string name="extension_m4a" translatable="false">m4a</string>
+
+    <!-- MIME types - DO NOT TRANSLATE -->
+    <string name="mime_any" translatable="false">*/*</string>
+    <string name="mime_image" translatable="false">image/*</string>
+    <string name="mime_video" translatable="false">video/*</string>
+    <string name="mime_audio" translatable="false">audio/*</string>
+    <string name="mime_text" translatable="false">text/*</string>
+    <string name="mime_pdf" translatable="false">application/pdf</string>
+    <string name="mime_zip" translatable="false">application/zip</string>
+    <string name="mime_apk" translatable="false">application/vnd.android.package-archive</string>
+    <string name="mime_folder" translatable="false">resource/folder</string>
+
+    <!-- Lock methods - DO NOT TRANSLATE -->
+    <string name="lock_method_none" translatable="false">none</string>
+    <string name="lock_method_password" translatable="false">password</string>
+    <string name="lock_method_pin" translatable="false">pin</string>
+    <string name="lock_method_pattern" translatable="false">pattern</string>
+    <string name="lock_method_biometric" translatable="false">biometric</string>
+
+    <!-- Encryption methods - DO NOT TRANSLATE -->
+    <string name="encryption_aes" translatable="false">aes</string>
+    <string name="encryption_chacha" translatable="false">chacha</string>
+    <string name="encryption_rsa" translatable="false">rsa</string>
+
+    <!-- Cloud providers - DO NOT TRANSLATE -->
+    <string name="cloud_google_drive" translatable="false">google_drive</string>
+    <string name="cloud_dropbox" translatable="false">dropbox</string>
+    <string name="cloud_onedrive" translatable="false">onedrive</string>
+    <string name="cloud_box" translatable="false">box</string>
+    <string name="cloud_yandex" translatable="false">yandex</string>
+
+    <!-- Theme modes - DO NOT TRANSLATE -->
+    <string name="theme_system" translatable="false">system</string>
+    <string name="theme_light" translatable="false">light</string>
+    <string name="theme_dark" translatable="false">dark</string>
+    <string name="theme_amoled" translatable="false">amoled</string>
+
+    <!-- Date formats - DO NOT TRANSLATE -->
+    <string name="date_format" translatable="false">dd/MM/yyyy HH:mm:ss</string>
+    <string name="date_format_short" translatable="false">dd/MM/yyyy</string>
+    <string name="date_format_time" translatable="false">HH:mm:ss</string>
+    <string name="date_format_file" translatable="false">yyyyMMdd_HHmmss</string>
+
+    <!-- Shared preference keys - DO NOT TRANSLATE -->
+    <string name="pref_first_run" translatable="false">first_run</string>
+    <string name="pref_intro_completed" translatable="false">intro_completed</string>
+    <string name="pref_theme_mode" translatable="false">theme_mode</string>
+    <string name="pref_language" translatable="false">language</string>
+    <string name="pref_app_lock_enabled" translatable="false">app_lock_enabled</string>
+    <string name="pref_lock_method" translatable="false">lock_method</string>
+    <string name="pref_password_hash" translatable="false">password_hash</string>
+    <string name="pref_password_hint" translatable="false">password_hint</string>
+    <string name="pref_pin_hash" translatable="false">pin_hash</string>
+    <string name="pref_pattern_hash" translatable="false">pattern_hash</string>
+    <string name="pref_biometric_enabled" translatable="false">biometric_enabled</string>
+    <string name="pref_lock_timeout" translatable="false">lock_timeout</string>
+    <string name="pref_auto_lock" translatable="false">auto_lock</string>
+    <string name="pref_lock_on_screen_off" translatable="false">lock_on_screen_off</string>
+    <string name="pref_show_lock_notifications" translatable="false">show_lock_notifications</string>
+    <string name="pref_hide_notification_content" translatable="false">hide_notification_content</string>
+    <string name="pref_encryption_enabled" translatable="false">encryption_enabled</string>
+    <string name="pref_encryption_method" translatable="false">encryption_method</string>
+    <string name="pref_encrypt_media" translatable="false">encrypt_media</string>
+    <string name="pref_encrypt_documents" translatable="false">encrypt_documents</string>
+    <string name="pref_encrypt_thumbnails" translatable="false">encrypt_thumbnails</string>
+    <string name="pref_secure_delete" translatable="false">secure_delete</string>
+    <string name="pref_default_storage_path" translatable="false">default_storage_path</string>
+    <string name="pref_show_hidden_files" translatable="false">show_hidden_files</string>
+    <string name="pref_show_thumbnails" translatable="false">show_thumbnails</string>
+    <string name="pref_thumbnail_quality" translatable="false">thumbnail_quality</string>
+    <string name="pref_thumbnail_size" translatable="false">thumbnail_size</string>
+    <string name="pref_cache_thumbnails" translatable="false">cache_thumbnails</string>
+    <string name="pref_generate_video_thumbnails" translatable="false">generate_video_thumbnails</string>
+    <string name="pref_generate_image_thumbnails" translatable="false">generate_image_thumbnails</string>
+    <string name="pref_generate_document_thumbnails" translatable="false">generate_document_thumbnails</string>
+    <string name="pref_thumbnail_cache_size" translatable="false">thumbnail_cache_size</string>
+    <string name="pref_auto_clean_enabled" translatable="false">auto_clean_enabled</string>
+    <string name="pref_clean_interval" translatable="false">clean_interval</string>
+    <string name="pref_delete_empty_folders" translatable="false">delete_empty_folders</string>
+    <string name="pref_delete_thumbnails" translatable="false">delete_thumbnails</string>
+    <string name="pref_delete_apk_files" translatable="false">delete_apk_files</string>
+    <string name="pref_delete_log_files" translatable="false">delete_log_files</string>
+    <string name="pref_prevent_screenshots" translatable="false">prevent_screenshots</string>
+    <string name="pref_root_access_enabled" translatable="false">root_access_enabled</string>
+    <string name="pref_ftp_server_enabled" translatable="false">ftp_server_enabled</string>
+    <string name="pref_cloud_sync_enabled" translatable="false">cloud_sync_enabled</string>
+    <string name="pref_last_backup_time" translatable="false">last_backup_time</string>
+    <string name="pref_backup_reminder" translatable="false">backup_reminder</string>
+
+    <!-- Intent extra keys - DO NOT TRANSLATE -->
+    <string name="extra_file_path" translatable="false">file_path</string>
+    <string name="extra_file_name" translatable="false">file_name</string>
+    <string name="extra_file_size" translatable="false">file_size</string>
+    <string name="extra_mime_type" translatable="false">mime_type</string>
+    <string name="extra_files_list" translatable="false">files_list</string>
+    <string name="extra_open_path" translatable="false">open_path</string>
+    <string name="extra_selection_mode" translatable="false">selection_mode</string>
+    <string name="extra_allow_multiple" translatable="false">allow_multiple</string>
+    <string name="extra_file_filter" translatable="false">file_filter</string>
+    <string name="extra_sort_mode" translatable="false">sort_mode</string>
+    <string name="extra_view_mode" translatable="false">view_mode</string>
+    <string name="extra_show_hidden" translatable="false">show_hidden</string>
+</resources>
