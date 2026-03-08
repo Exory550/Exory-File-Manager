@@ -196,8 +196,8 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.6.0")
     implementation("androidx.compose.material3:material3:1.2.0-beta01")
     
-    implementation("com.github.MikeOrtiz:TouchImageView:3.6")
-    implementation("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
+    implementation("com.github.MikeOrtiz:TouchImageView:3.0.0")
+    implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
     
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.0")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.6.0")
