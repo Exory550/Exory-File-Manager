@@ -264,7 +264,7 @@
     <string name="step_enable_manage_storage">Enable \"Allow manage all files\"</string>
     <string name="step_click_grant">Click \"Grant\"</string>
     <string name="step_select_folder">Select folder</string>
-    <string name="step_allow_access">Allow access</thunder></string>
+    <string name="step_allow_access">Allow access</string>
     <string name="step_install_file_manager">Install file manager</string>
     <string name="step_grant_permission">Grant permission</string>
     <string name="dont_ask_again">Don\'t ask again</string>
