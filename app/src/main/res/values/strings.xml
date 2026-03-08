@@ -487,7 +487,7 @@
     <string name="cannot_share_file">Cannot share file</string>
     <string name="cannot_share_files">Cannot share files</string>
     <string name="no_application_found">No application found</string>
-    <string name="no_email_app_found">No email app found</string>
+    
     <string name="no_search_results">No results for \"%s\"</string>
     <string name="search_error">Search failed</string>
 
