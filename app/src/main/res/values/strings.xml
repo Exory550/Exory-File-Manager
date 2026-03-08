@@ -496,7 +496,7 @@
     <string name="no_files">No files</string>
     <string name="no_favorites">No favorites yet</string>
     <string name="no_recent_files">No recent files</string>
-    <string name="no_search_results">No results found</string>
+    
     <string name="no_data">No data</string>
     <string name="add_favorites_hint">Tap + to add favorites</string>
     <string name="no_app_data">No app data found</string>
