@@ -537,9 +537,7 @@
     <string name="hide_advanced">Hide advanced</string>
     <string name="estimated_size">Estimated size: %s</string>
     <string name="files_selected">Files selected:</string>
-    <string name="total_size">Total size:</string>
     <string name="password">Password</string>
-    <string name="confirm_password">Confirm password</string>
     <string name="compressed_file">Compressed file</string>
     <string name="extract_all">Extract all</string>
     <string name="extract_selected">Extract selected</string>
@@ -551,8 +549,6 @@
     <string name="comment">Comment</string>
     <string name="structure">Structure</string>
     <string name="compressed_structure">%d folders, %d files, %d total</string>
-    <string name="extracting">Extracting...</string>
-    <string name="compressing">Compressing...</string>
 
     <!-- Favorites -->
     <string name="add_favorite">Add favorite</string>
@@ -585,16 +581,12 @@
     <string name="file_exists">File exists</string>
     <string name="file_exists_message">A file named \"%s\" already exists. Do you want to overwrite it?</string>
     <string name="rename_file">Rename</string>
-    <string name="keep_both">Keep both</string>
     <string name="save_options">Save options</string>
     <string name="save_to_external">Save to external storage</string>
     <string name="advanced">Advanced</string>
     <string name="new_name">New name</string>
     <string name="choose_action">Choose action</string>
     <string name="replace">Replace</string>
-    <string name="skip">Skip</string>
-    <string name="rename">Rename</string>
-    <string name="keep_both">Keep both</string>
     <string name="apply_to_all">Apply to all</string>
     <string name="content_preview">Content preview</string>
     <string name="advanced_options">Advanced options</string>
@@ -647,8 +639,6 @@
     <string name="no_duplicates_found">No duplicates found</string>
     <string name="storage_info">Storage info</string>
     <string name="total_space">Total space</string>
-    <string name="free_space">Free space</string>
-    <string name="used_space">Used space</string>
     <string name="usage_percentage">Usage: %d%%</string>
     <string name="writable">Writable</string>
     <string name="state">State</string>
