@@ -418,7 +418,7 @@
     <string name="developer_info">Developer info</string>
     <string name="rate_us">Rate us on Play Store</string>
     <string name="share_with_friends">Share with friends</string>
-    <string name="send_feedback">Send feedback</string>
+    
     <string name="feedback_email_subject">Exory File Manager v%s Feedback</string>
     <string name="feedback_email_template">Please write your feedback here...</string>
     <string name="share_app_text">Check out Exory File Manager - the most powerful file manager for Android!\n%s</string>
