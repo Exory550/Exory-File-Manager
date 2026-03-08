@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App name -->
-    <string name="app_name">Exory File Manager</string>
 
     <!-- Common -->
     <string name="ok">OK</string>
@@ -352,8 +351,6 @@
     <string name="encryption">Encryption</string>
     <string name="enable_encryption">Enable encryption</string>
     <string name="encryption_method">Encryption method</string>
-    <string name="encryption_aes">AES-256</string>
-    <string name="encryption_chacha">ChaCha20-Poly1305</string>
     <string name="encrypt_media">Encrypt media files</string>
     <string name="encrypt_documents">Encrypt documents</string>
     <string name="encrypt_thumbnails">Encrypt thumbnails</string>
