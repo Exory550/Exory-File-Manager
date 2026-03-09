@@ -187,6 +187,7 @@ dependencies {
     
     implementation("com.jakewharton.threetenabp:threetenabp:1.4.6")
     implementation("com.airbnb.android:lottie:6.1.0")
+    implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("com.github.chrisbanes:PhotoView:2.3.0")
     
     implementation("com.google.android.material:compose-theme-adapter:1.2.1")
