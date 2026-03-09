@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textColorPrimary" format="color|reference" />
+    <attr name="textColorSecondary" format="color|reference" />
+    <attr name="textColorDisabled" format="color|reference" />
+    <attr name="colorBackground" format="color|reference" />
+    <attr name="surfaceColor" format="color|reference" />
+    <attr name="borderColor" format="color|reference" />
+    <attr name="windowLightStatusBar" format="boolean" />
+    <attr name="windowLightNavigationBar" format="boolean" />
+    <attr name="backgroundColor" format="color|reference" />
+    <attr name="iconColor" format="color|reference" />
+    <attr name="dividerColor" format="color|reference" />
+    <attr name="rippleColor" format="color|reference" />
+    <attr name="cardBackgroundColor" format="color|reference" />
+    <attr name="toolbarColor" format="color|reference" />
+    <attr name="statusBarColor" format="color|reference" />
+    <attr name="navigationBarColor" format="color|reference" />
+</resources>
