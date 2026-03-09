@@ -323,7 +323,8 @@ class RenameItemDialog(
         super.show()
         etNewName.requestFocus()
     }
-    
+
+    companion object {
         fun show(
             context: Context,
             fileItem: FileItem,
@@ -332,7 +333,7 @@ class RenameItemDialog(
         ) {
             RenameItemDialog(context, fileItem, onRenamed, onCancel).show()
         }
-        
+
         fun show(
             context: Context,
             file: File,
