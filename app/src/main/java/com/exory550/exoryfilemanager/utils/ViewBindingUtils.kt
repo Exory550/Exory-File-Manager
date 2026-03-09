@@ -1,11 +1,8 @@
 package com.exory550.exoryfilemanager.utils
 
-import android.content.Context
-import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Inject
-import javax.inject.Singleton
+import android.view.LayoutInflater
+import android.view.View
 
-@Singleton
-class ViewBindingUtils @Inject constructor(
-    @ApplicationContext private val context: Context
-)
+object ViewBindingUtils {
+    fun inflate(inflater: LayoutInflater): View? = null
+}

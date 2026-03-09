@@ -45,7 +45,6 @@ class RenameItemDialog(
     private lateinit var btnCancel: MaterialButton
     private lateinit var btnClose: ImageButton
     
-    companion object {
         private val INVALID_CHARS = arrayOf("\\", "/", ":", "*", "?", "\"", "<", ">", "|")
         private val SUGGESTIONS = listOf(
             "Copy", "Backup", "New", "Old", "Final", "Draft",
@@ -325,7 +324,6 @@ class RenameItemDialog(
         etNewName.requestFocus()
     }
     
-    companion object {
         fun show(
             context: Context,
             fileItem: FileItem,
