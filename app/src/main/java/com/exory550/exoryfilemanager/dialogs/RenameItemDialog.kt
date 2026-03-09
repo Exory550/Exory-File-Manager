@@ -45,12 +45,6 @@ class RenameItemDialog(
     private lateinit var btnCancel: MaterialButton
     private lateinit var btnClose: ImageButton
     
-        private val INVALID_CHARS = arrayOf("\\", "/", ":", "*", "?", "\"", "<", ">", "|")
-        private val SUGGESTIONS = listOf(
-            "Copy", "Backup", "New", "Old", "Final", "Draft",
-            "Version 1", "Version 2", "Updated", "Modified"
-        )
-    }
     
     private var keepExtension = true
     private var nameWithoutExtension = ""
@@ -325,6 +319,12 @@ class RenameItemDialog(
     }
 
     companion object {
+        private val INVALID_CHARS = arrayOf("\\", "/", ":", "*", "?", "\"", "<", ">", "|")
+        private val SUGGESTIONS = listOf(
+            "Copy", "Backup", "New", "Old", "Final", "Draft",
+            "Version 1", "Version 2", "Updated", "Modified"
+        )
+
         fun show(
             context: Context,
             fileItem: FileItem,
