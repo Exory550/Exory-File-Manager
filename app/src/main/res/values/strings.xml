@@ -680,4 +680,6 @@
 
     <!-- Search hint -->
     <string name="search_hint">Search...</string>
+    <string name="file_path">File path</string>
+    <string name="file_size">File size</string>
 </resources>

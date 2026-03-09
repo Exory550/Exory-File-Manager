@@ -18,4 +18,5 @@
     <attr name="navigationBarColor" format="color|reference" />
     <attr name="iconTintInverse" format="color|reference" />
     <attr name="menuTint" format="color|reference" />
+    <attr name="colorOnPrimarySecondary" format="color|reference" />
 </resources>
