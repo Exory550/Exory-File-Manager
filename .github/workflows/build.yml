@@ -25,10 +25,11 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: |
-          ./gradlew assembleDebug --stacktrace 2>&1 | tee build.log || true
-          echo "=== ERRORS ==="
-          grep -E "^e:|error:|Exception|Could not load" build.log | head -50
+        run: ./gradlew assembleDebug --info 2>&1 | tee build.log || true
+
+      - name: Show errors
+        if: always()
+        run: grep -E "error:|Error|exception|Exception|Cannot|Could not" build.log | grep -v "^>" | head -80
 
       - name: Upload build log
         if: always()
