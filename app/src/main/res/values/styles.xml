@@ -124,7 +124,7 @@
     </style>
 
     <!-- Card styles -->
-    <style name="Widget.ExoryFileManager.Card" parent="Widget.Material3.CardView">
+    <style name="Widget.ExoryFileManager.Card" parent="Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">@dimen/radius_small</item>
         <item name="cardElevation">@dimen/elevation_small</item>
         <item name="cardPreventCornerOverlap">true</item>

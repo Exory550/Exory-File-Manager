@@ -16,4 +16,6 @@
     <attr name="toolbarColor" format="color|reference" />
     <attr name="statusBarColor" format="color|reference" />
     <attr name="navigationBarColor" format="color|reference" />
+    <attr name="iconTintInverse" format="color|reference" />
+    <attr name="menuTint" format="color|reference" />
 </resources>
