@@ -181,7 +181,7 @@
     </style>
 
     <!-- Preference styles -->
-    <style name="Preference.ExoryFileManager" parent="PreferenceThemeOverlay.Material3">
+    <style name="Preference.ExoryFileManager" parent="PreferenceThemeOverlay">
         <item name="android:iconSpaceReserved">false</item>
         <item name="android:singleLineTitle">false</item>
     </style>

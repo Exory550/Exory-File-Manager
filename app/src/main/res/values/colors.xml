@@ -70,4 +70,5 @@
 
     <!-- Icon launcher background -->
     <color name="ic_launcher_background">#2196F3</color>
+    <color name="white">#FFFFFF</color>
 </resources>
