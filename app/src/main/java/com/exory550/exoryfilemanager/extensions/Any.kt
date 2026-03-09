@@ -537,7 +537,7 @@ fun <A, B> Pair<A, B>.swap(): Pair<B, A> {
 /**
  * Converts pair to triple with third element
  */
-fun <A, B> Pair<A, B>.toTriple<C>(third: C): Triple<A, B, C> {
+fun <A, B, C> Pair<A, B>.toTriple(third: C): Triple<A, B, C> {
     return Triple(first, second, third)
 }
 
