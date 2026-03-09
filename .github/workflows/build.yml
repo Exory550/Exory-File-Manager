@@ -25,11 +25,21 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --debug 2>&1 | grep -E "error:|warning:|Error|Exception|Could not" | head -100
+        run: ./gradlew assembleDebug
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: Exory-File-Manager-Debug
           path: app/build/outputs/apk/debug/*.apk
+          retention-days: 30
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Exory-File-Manager-Release
+          path: app/build/outputs/apk/release/*.apk
           retention-days: 30
