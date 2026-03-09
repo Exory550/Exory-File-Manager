@@ -5,7 +5,6 @@ plugins {
     id("dagger.hilt.android.plugin")
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs.kotlin")
-    id("com.google.devtools.ksp") version "1.9.20-1.0.14"
 }
 
 android {
@@ -139,7 +138,7 @@ dependencies {
     
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
-    ksp("androidx.room:room-compiler:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
     
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-compiler:2.50")
@@ -226,9 +225,6 @@ kapt {
     useBuildCache = true
 }
 
-ksp {
-    arg("room.schemaLocation", "$projectDir/schemas")
-}
 
 hilt {
     enableAggregatingTask = true

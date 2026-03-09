@@ -31,7 +31,7 @@ jobs:
           https://raw.githubusercontent.com/gradle/gradle/master/gradle/wrapper/gradle-wrapper.jar
 
       - name: Build Debug APK
-        run: ./gradlew kaptGenerateStubsDebugKotlin --info --stacktrace
+        run: ./gradlew assembleDebug --info
 
       - name: Build Release APK
         run: ./gradlew assembleRelease
