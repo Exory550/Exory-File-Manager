@@ -92,7 +92,7 @@
 
     <!-- Progress bar -->
     <dimen name="progress_bar_height">4dp</dimen>
-    <dimen name="progress_bar_width">match_parent</dimen>
+    <dimen name="progress_bar_width">0dp</dimen>
 
     <!-- Thumbnail sizes -->
     <dimen name="thumbnail_size_small">48dp</dimen>

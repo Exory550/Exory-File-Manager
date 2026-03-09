@@ -45,9 +45,9 @@
     <string name="total_size">Total Size: %s</string>
     <string name="free_space">Free: %s</string>
     <string name="used_space">Used: %s</string>
-    <string name="storage_used">%s / %s</string>
+    <string name="storage_used" formatted="false">%s / %s</string>
     <string name="storage_free">%s free</string>
-    <string name="storage_usage">%s used of %s (%d%%)</string>
+    <string name="storage_usage" formatted="false">%s used of %s (%d%%)</string>
 
     <!-- Navigation -->
     <string name="home">Home</string>
@@ -271,7 +271,7 @@
     <string name="storage_access_denied">Access denied</string>
     <string name="storage_access_already_granted">Access already granted</string>
     <string name="not_available_for_android_version">Not available for this Android version</string>
-    <string name="android_version">Android %s (API %d)</string>
+    <string name="android_version" formatted="false">Android %s (API %d)</string>
     <string name="target_path">Target path: %s</string>
 
     <!-- Intro screens -->
@@ -438,7 +438,7 @@
     <string name="exporting">Exporting...</string>
     <string name="importing">Importing...</string>
     <string name="operation_success">Operation completed successfully</string>
-    <string name="operation_partial">Completed: %d succeeded, %d failed</string>
+    <string name="operation_partial" formatted="false">Completed: %d succeeded, %d failed</string>
     <string name="operation_failed">Operation failed</string>
     <string name="operation_cancelled">Operation cancelled</string>
     <string name="delete_success">Deleted successfully</string>
@@ -545,7 +545,7 @@
     <string name="compression_method">Compression method</string>
     <string name="comment">Comment</string>
     <string name="structure">Structure</string>
-    <string name="compressed_structure">%d folders, %d files, %d total</string>
+    <string name="compressed_structure" formatted="false">%d folders, %d files, %d total</string>
 
     <!-- Favorites -->
     <string name="add_favorite">Add favorite</string>
@@ -620,15 +620,15 @@
     <string name="suggestion_apk_file">APK file (after installation)</string>
     <string name="suggestion_log_file">Log file</string>
     <string name="suggestion_duplicate_file">Duplicate file</string>
-    <string name="cleanup_summary">%d items, %s</string>
+    <string name="cleanup_summary" formatted="false">%d items, %s</string>
     <string name="quick_cleanup">Quick cleanup</string>
     <string name="quick_cleanup_message">Delete %d items (%s)?</string>
     <string name="cleanup_all">Cleanup all</string>
-    <string name="cleanup_all_message">Delete all %d items (%s)?</string>
+    <string name="cleanup_all_message" formatted="false">Delete all %d items (%s)?</string>
     <string name="cleanup_selected">Cleanup selected</string>
-    <string name="cleanup_selected_message">Delete %d selected items (%s)?</string>
+    <string name="cleanup_selected_message" formatted="false">Delete %d selected items (%s)?</string>
     <string name="cleanup_complete">Cleanup complete</string>
-    <string name="cleanup_partial">Cleaned %d items, %d failed</string>
+    <string name="cleanup_partial" formatted="false">Cleaned %d items, %d failed</string>
     <string name="cleanup_failed">Cleanup failed</string>
     <string name="nothing_to_clean">Nothing to clean</string>
     <string name="searching_duplicates">Searching for duplicates...</string>
@@ -655,7 +655,7 @@
     <!-- Beta warning -->
     <string name="beta_warning">Beta version</string>
     <string name="beta_warning_message">This is a beta version. Some features may not work correctly and data loss may occur. Please backup your important files before using.</string>
-    <string name="beta_build_info">Version: %s (%d)\nBuild: %s\nDate: %s</string>
+    <string name="beta_build_info" formatted="false">Version: %s (%d)\nBuild: %s\nDate: %s</string>
     <string name="dont_show_again">Don\'t show again</string>
 
     <!-- Time ago -->
