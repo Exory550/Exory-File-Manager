@@ -709,4 +709,10 @@
     <string name="digits">Digits</string>
     <string name="separator">Separator</string>
     <string name="use_parentheses">Use parentheses</string>
+    <string name="lower_case">Lower case</string>
+    <string name="upper_case">Upper case</string>
+    <string name="title_case">Title case</string>
+    <string name="sentence_case">Sentence case</string>
+    <string name="capitalize">Capitalize</string>
+    <string name="email">Email</string>
 </resources>
