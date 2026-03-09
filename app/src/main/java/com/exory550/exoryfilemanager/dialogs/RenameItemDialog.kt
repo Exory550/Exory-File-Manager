@@ -351,4 +351,3 @@ class RenameItemDialog(
             RenameItemDialog(context, fileItem, onRenamed, onCancel).show()
         }
     }
-}
