@@ -715,4 +715,8 @@
     <string name="sentence_case">Sentence case</string>
     <string name="capitalize">Capitalize</string>
     <string name="email">Email</string>
+    <string name="extract">Extract</string>
+    <string name="export">Export</string>
+    <string name="import">Import</string>
+    <string name="search_settings">Search settings</string>
 </resources>
