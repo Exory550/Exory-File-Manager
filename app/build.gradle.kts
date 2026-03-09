@@ -227,7 +227,7 @@ kapt {
 
 
 hilt {
-    enableAggregatingTask = true
+    enableAggregatingTask = false
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
