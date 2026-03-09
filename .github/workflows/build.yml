@@ -25,12 +25,15 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: |
+          ./gradlew assembleDebug --stacktrace 2>&1 | tee build.log || true
+          echo "=== ERRORS ==="
+          grep -E "^e:|error:|Exception|Could not load" build.log | head -50
 
-      - name: Upload Debug APK
-        if: success()
+      - name: Upload build log
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Exory-File-Manager-Debug
-          path: app/build/outputs/apk/debug/*.apk
-          retention-days: 30
+          name: build-log
+          path: build.log
+          retention-days: 7
