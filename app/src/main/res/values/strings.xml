@@ -717,6 +717,6 @@
     <string name="email">Email</string>
     <string name="extract">Extract</string>
     <string name="export">Export</string>
-    <string name="import">Import</string>
+    <string name="import_text">Import</string>
     <string name="search_settings">Search settings</string>
 </resources>

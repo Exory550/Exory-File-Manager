@@ -65,7 +65,7 @@
     <item
         android:id="@+id/action_import"
         android:icon="@drawable/ic_import_vector"
-        android:title="@string/import"
+        android:title="@string/import_text"
         app:showAsAction="never" />
 
 </menu>
