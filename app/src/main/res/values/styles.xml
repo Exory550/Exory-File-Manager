@@ -80,8 +80,8 @@
 
     <!-- Full screen dialog theme -->
     <style name="Theme.ExoryFileManager.Dialog.FullScreen" parent="Theme.Material3.Light.Dialog">
-        <item name="android:windowMinWidthMajor">match_parent</item>
-        <item name="android:windowMinWidthMinor">match_parent</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
