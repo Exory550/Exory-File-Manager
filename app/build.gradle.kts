@@ -252,9 +252,6 @@ tasks.withType<Test> {
 
 configurations.all {
     resolutionStrategy {
-        force("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
-        force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.22")
-        force("org.jetbrains.kotlin:kotlin-reflect:1.9.22")
         force("androidx.core:core-ktx:1.12.0")
     }
 }
