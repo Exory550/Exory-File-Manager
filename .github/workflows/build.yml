@@ -18,12 +18,4 @@ jobs:
       - name: Build Debug APK
         run: |
           chmod +x gradlew
-          ./gradlew kaptGenerateStubsDebugKotlin 2>&1 | tee build_log.txt || true
-          echo "=== KOTLIN ERRORS ==="
-          grep "^e: " build_log.txt || echo "No e: errors found"
-      - name: Upload build log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log
-          path: build_log.txt
+          ./gradlew kaptGenerateStubsDebugKotlin --debug 2>&1 | grep -E "Could not load|Error module|ClassNotFoundException|NoClassDefFound|module.*error" | head -30
