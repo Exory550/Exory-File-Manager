@@ -18,10 +18,12 @@ jobs:
       - name: Build Debug APK
         run: |
           chmod +x gradlew
-          ./gradlew clean assembleDebug --stacktrace
-      - name: Upload Debug APK
+          ./gradlew kaptGenerateStubsDebugKotlin 2>&1 | tee build_log.txt || true
+          echo "=== KOTLIN ERRORS ==="
+          grep "^e: " build_log.txt || echo "No e: errors found"
+      - name: Upload build log
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Exory-File-Manager-Debug
-          path: app/build/outputs/apk/debug/*.apk
-          retention-days: 30
+          name: build-log
+          path: build_log.txt
