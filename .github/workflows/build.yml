@@ -16,4 +16,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build Debug APK
-        run: chmod +x gradlew && ./gradlew assembleDebug --info 2>&1 | grep -E "error:|\.kt:|e: " | head -50
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --info 2>&1 | grep -E "error:|e: " | head -50
