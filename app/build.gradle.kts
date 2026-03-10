@@ -227,7 +227,6 @@ kapt {
     }
 }
 
-
 hilt {
     enableAggregatingTask = true
 }
@@ -240,9 +239,6 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
             "-Xcontext-receivers"
         )
     }
-}
-
-
 }
 
 configurations.all {
