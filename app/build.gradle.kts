@@ -79,7 +79,7 @@ android {
     }
     
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
+        kotlinCompilerExtensionVersion = "1.5.13"
     }
     
     packaging {
@@ -174,12 +174,12 @@ dependencies {
     implementation("androidx.documentfile:documentfile:1.0.1")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("androidx.security:security-crypto:1.1.0-alpha06")
-    implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
+    implementation("androidx.biometric:biometric-ktx:1.2.0-rc01")
     
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.android.gms:play-services-oss-licenses:17.1.0")
     
-    implementation("com.google.android.exoplayer:exoplayer:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer:2.20.1")
     implementation("com.google.android.exoplayer:exoplayer-core:2.19.1")
     implementation("com.google.android.exoplayer:exoplayer-dash:2.19.1")
     implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
@@ -194,7 +194,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.6.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.6.0")
     implementation("androidx.compose.runtime:runtime-livedata:1.6.0")
-    implementation("androidx.compose.material3:material3:1.2.0-beta01")
+    implementation("androidx.compose.material3:material3:1.2.0")
     
     
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.0")
@@ -222,7 +222,8 @@ dependencies {
 
 kapt {
     correctErrorTypes = true
-    useBuildCache = false
+    useBuildCache = true
+    incremental = true
     javacOptions {
         option("-Xmaxerrs", 500)
     }
