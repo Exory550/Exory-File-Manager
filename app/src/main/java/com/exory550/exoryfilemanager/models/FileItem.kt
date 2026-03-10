@@ -1,6 +1,6 @@
 package com.exory550.exoryfilemanager.models
 
-data class FileItem(
+data class ExoryExoryFileItem(
     val id: Long = 0,
     val name: String = "",
     val path: String = "",

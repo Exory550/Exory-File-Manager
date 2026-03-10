@@ -18,11 +18,11 @@ import java.util.Date
 import java.util.Locale
 
 class FilePickerItemsAdapter(
-    private val onItemClick: (FileItem) -> Unit,
-    private val onItemLongClick: (FileItem) -> Boolean
-) : ListAdapter<FileItem, FilePickerItemsAdapter.ViewHolder>(DiffCallback()) {
+    private val onItemClick: (ExoryFileItem) -> Unit,
+    private val onItemLongClick: (ExoryFileItem) -> Boolean
+) : ListAdapter<ExoryFileItem, FilePickerItemsAdapter.ViewHolder>(DiffCallback()) {
 
-    private var selectedItems = mutableSetOf<FileItem>()
+    private var selectedItems = mutableSetOf<ExoryFileItem>()
     private var isSelectionMode = false
     private var showCheckboxes = false
     private var showFileSize = true
@@ -86,7 +86,7 @@ class FilePickerItemsAdapter(
         singleClickSelect = singleClick
     }
     
-    fun toggleSelection(item: FileItem) {
+    fun toggleSelection(item: ExoryExoryFileItem) {
         if (selectedItems.contains(item)) {
             selectedItems.remove(item)
         } else {
@@ -95,7 +95,7 @@ class FilePickerItemsAdapter(
         notifyItemChanged(currentList.indexOf(item))
     }
     
-    fun getSelectedItems(): List<FileItem> = selectedItems.toList()
+    fun getSelectedItems(): List<ExoryFileItem> = selectedItems.toList()
     
     fun selectAll() {
         selectedItems.clear()
@@ -127,7 +127,7 @@ class FilePickerItemsAdapter(
         private val ivSelected: ImageView = itemView.findViewById(R.id.ivSelected)
         private val selectionOverlay: View = itemView.findViewById(R.id.selectionOverlay)
         
-        fun bind(item: FileItem) {
+        fun bind(item: ExoryExoryFileItem) {
             tvName.text = item.name
             tvPath.text = File(item.path).parent ?: "/"
             
@@ -223,12 +223,12 @@ class FilePickerItemsAdapter(
         }
     }
     
-    class DiffCallback : DiffUtil.ItemCallback<FileItem>() {
-        override fun areItemsTheSame(oldItem: FileItem, newItem: FileItem): Boolean {
+    class DiffCallback : DiffUtil.ItemCallback<ExoryFileItem>() {
+        override fun areItemsTheSame(oldItem: ExoryExoryFileItem, newItem: ExoryExoryFileItem): Boolean {
             return oldItem.path == newItem.path
         }
         
-        override fun areContentsTheSame(oldItem: FileItem, newItem: FileItem): Boolean {
+        override fun areContentsTheSame(oldItem: ExoryExoryFileItem, newItem: ExoryExoryFileItem): Boolean {
             return oldItem == newItem
         }
     }

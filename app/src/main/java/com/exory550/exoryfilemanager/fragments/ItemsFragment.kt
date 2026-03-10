@@ -37,7 +37,7 @@ class ItemsFragment : Fragment() {
     lateinit var preferenceManager: PreferenceManager
 
     private var currentPath: String = Environment.getExternalStorageDirectory().absolutePath
-    private var currentFiles: List<FileItem> = emptyList()
+    private var currentFiles: List<ExoryFileItem> = emptyList()
     private var currentViewMode = VIEW_MODE_LIST
     private var currentSortMode = SORT_BY_NAME
     private var sortAscending = true
@@ -131,7 +131,7 @@ class ItemsFragment : Fragment() {
         loadDirectory(currentPath)
     }
 
-    private fun openFile(fileItem: FileItem) {
+    private fun openFile(fileItem: ExoryExoryFileItem) {
         val intent = Intent(requireContext(), FileViewerActivity::class.java).apply {
             putExtra(EXTRA_FILE_PATH, fileItem.path)
             putExtra(EXTRA_FILE_NAME, fileItem.name)

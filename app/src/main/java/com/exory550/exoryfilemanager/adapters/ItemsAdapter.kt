@@ -16,12 +16,12 @@ import java.util.Date
 import java.util.Locale
 
 class ItemsAdapter(
-    private var items: List<FileItem> = emptyList(),
-    private val onItemClick: (FileItem) -> Unit,
-    private val onItemLongClick: (FileItem) -> Boolean
+    private var items: List<ExoryFileItem> = emptyList(),
+    private val onItemClick: (ExoryFileItem) -> Unit,
+    private val onItemLongClick: (ExoryFileItem) -> Boolean
 ) : RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
 
-    private var selectedItems = mutableSetOf<FileItem>()
+    private var selectedItems = mutableSetOf<ExoryFileItem>()
     private var isSelectionMode = false
     private var showCheckboxes = false
     private var showSize = true
@@ -78,7 +78,7 @@ class ItemsAdapter(
         notifyDataSetChanged()
     }
     
-    fun updateItems(newItems: List<FileItem>) {
+    fun updateItems(newItems: List<ExoryFileItem>) {
         items = newItems
         notifyDataSetChanged()
     }
@@ -100,7 +100,7 @@ class ItemsAdapter(
         notifyDataSetChanged()
     }
     
-    fun toggleSelection(item: FileItem) {
+    fun toggleSelection(item: ExoryExoryFileItem) {
         if (selectedItems.contains(item)) {
             selectedItems.remove(item)
         } else {
@@ -109,7 +109,7 @@ class ItemsAdapter(
         notifyItemChanged(items.indexOf(item))
     }
     
-    fun getSelectedItems(): List<FileItem> = selectedItems.toList()
+    fun getSelectedItems(): List<ExoryFileItem> = selectedItems.toList()
     
     fun selectAll() {
         selectedItems.clear()
@@ -141,7 +141,7 @@ class ItemsAdapter(
         private val ivSelected: ImageView? = itemView.findViewById(R.id.ivSelected)
         private val selectionOverlay: View? = itemView.findViewById(R.id.selectionOverlay)
         
-        fun bind(item: FileItem) {
+        fun bind(item: ExoryExoryFileItem) {
             tvName.text = item.name
             
             val context = itemView.context

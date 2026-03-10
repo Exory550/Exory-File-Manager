@@ -92,7 +92,7 @@ class FilePickerDialog(
     private lateinit var adapter: FilePickerItemsAdapter
     
     private var currentPath: String = config.initialPath
-    private var currentFiles: List<FileItem> = emptyList()
+    private var currentFiles: List<ExoryFileItem> = emptyList()
     private var selectedFiles = mutableListOf<File>()
     private var isSearching = false
     

@@ -25,13 +25,13 @@ import java.io.File
 
 class RenameItemsDialog(
     context: Context,
-    private val files: List<FileItem>,
+    private val files: List<ExoryFileItem>,
     private val onItemsRenamed: (List<RenameOperation>) -> Unit,
     private val onCancel: (() -> Unit)? = null
 ) : Dialog(context, R.style.Theme_ExoryFileManager_Dialog_FullScreen) {
 
     data class RenameOperation(
-        val originalFile: FileItem,
+        val originalFile: ExoryExoryFileItem,
         val newName: String,
         val newPath: String
     )
@@ -536,7 +536,7 @@ class RenameItemsDialog(
     companion object {
         fun show(
             context: Context,
-            files: List<FileItem>,
+            files: List<ExoryFileItem>,
             onItemsRenamed: (List<RenameOperation>) -> Unit,
             onCancel: (() -> Unit)? = null
         ) {

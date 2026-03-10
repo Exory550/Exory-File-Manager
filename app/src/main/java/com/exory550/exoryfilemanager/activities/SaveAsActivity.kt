@@ -54,7 +54,7 @@ class SaveAsActivity : BaseAbstractActivity() {
     lateinit var preferenceManager: PreferenceManager
     
     private var currentPath: String = Environment.getExternalStorageDirectory().absolutePath
-    private var currentFiles: List<FileItem> = emptyList()
+    private var currentFiles: List<ExoryFileItem> = emptyList()
     private var sourceData: ByteArray? = null
     private var sourceUri: Uri? = null
     private var sourceFile: File? = null
