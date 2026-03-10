@@ -223,7 +223,6 @@ dependencies {
 kapt {
     correctErrorTypes = true
     useBuildCache = true
-    incremental = true
     javacOptions {
         option("-Xmaxerrs", 500)
     }
