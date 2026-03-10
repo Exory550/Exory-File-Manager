@@ -79,7 +79,7 @@ android {
     }
     
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.4"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
     
     packaging {
@@ -114,7 +114,7 @@ android {
 }
 
 dependencies {
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.20"))
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.22"))
     
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -222,7 +222,10 @@ dependencies {
 
 kapt {
     correctErrorTypes = true
-    useBuildCache = true
+    useBuildCache = false
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
 }
 
 
@@ -249,8 +252,8 @@ tasks.withType<Test> {
 
 configurations.all {
     resolutionStrategy {
-        force("org.jetbrains.kotlin:kotlin-stdlib:1.9.20")
-        force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.20")
+        force("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+        force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.22")
         force("androidx.core:core-ktx:1.12.0")
     }
 }
