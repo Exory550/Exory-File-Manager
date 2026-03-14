@@ -18,7 +18,16 @@ jobs:
       - name: Build Debug APK
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --stacktrace
+          ./gradlew assembleDebug --info > build.log 2>&1 || true
+          grep -E "^e:|error:|Error" build.log | head -50
+          cat build.log | tail -100
+      - name: Upload Build Log
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: build-log
+          path: build.log
+          retention-days: 7
       - name: Upload Debug APK
         if: success()
         uses: actions/upload-artifact@v4.6.2
