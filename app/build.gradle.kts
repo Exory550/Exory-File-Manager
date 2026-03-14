@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.exory550.filemanager"
+    namespace = "com.exory550.exoryfilemanager"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.exory550.filemanager"
+        applicationId = "com.exory550.exoryfilemanager"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
