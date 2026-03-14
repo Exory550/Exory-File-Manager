@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="show_thumbnails"
+        app:title="@string/show_thumbnails"
+        app:defaultValue="true" />
+
+    <SwitchPreferenceCompat
+        app:key="generate_image_thumbnails"
+        app:title="@string/generate_image_thumbnails"
+        app:defaultValue="true" />
+
+    <SwitchPreferenceCompat
+        app:key="generate_video_thumbnails"
+        app:title="@string/generate_video_thumbnails"
+        app:defaultValue="true" />
+
+    <SwitchPreferenceCompat
+        app:key="generate_document_thumbnails"
+        app:title="@string/generate_document_thumbnails"
+        app:defaultValue="true" />
+
+    <SwitchPreferenceCompat
+        app:key="cache_thumbnails"
+        app:title="@string/cache_thumbnails"
+        app:defaultValue="true" />
+
+    <ListPreference
+        app:key="thumbnail_quality"
+        app:title="@string/thumbnail_quality"
+        app:defaultValue="80" />
+
+    <ListPreference
+        app:key="thumbnail_size"
+        app:title="@string/thumbnail_size"
+        app:defaultValue="256" />
+
+    <ListPreference
+        app:key="thumbnail_cache_size"
+        app:title="@string/thumbnail_cache_size"
+        app:defaultValue="100" />
+
+    <Preference
+        app:key="clear_thumbnail_cache"
+        app:title="@string/clear_thumbnail_cache" />
+
+</PreferenceScreen>
