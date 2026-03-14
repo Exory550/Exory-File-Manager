@@ -51,7 +51,6 @@ import kotlinx.coroutines.withContext
 import java.io.File
 import javax.inject.Inject
 
-@AndroidEntryPoint
 class MainActivity : BaseAbstractActivity(), 
     FileAdapter.OnFileClickListener,
     FileAdapter.OnFileLongClickListener,
