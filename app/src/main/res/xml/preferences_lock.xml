@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat app:key="enable_app_lock" app:title="@string/enable_app_lock" />
+    <ListPreference app:key="lock_method" app:title="@string/lock_method" app:defaultValue="password" />
+    <Preference app:key="setup_password" app:title="@string/setup_password" />
+    <Preference app:key="setup_pin" app:title="@string/setup_pin" />
+    <Preference app:key="setup_pattern" app:title="@string/setup_pattern" />
+    <SwitchPreferenceCompat app:key="enable_biometric" app:title="@string/enable_biometric" />
+    <ListPreference app:key="lock_timeout" app:title="@string/lock_timeout" app:defaultValue="0" />
+    <SwitchPreferenceCompat app:key="auto_lock" app:title="@string/auto_lock" />
+    <SwitchPreferenceCompat app:key="lock_on_screen_off" app:title="@string/lock_on_screen_off" />
+    <SwitchPreferenceCompat app:key="show_notifications" app:title="@string/show_notifications" />
+    <SwitchPreferenceCompat app:key="hide_notification_content" app:title="@string/hide_notification_content" />
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference app:key="theme_mode" app:title="@string/theme" app:defaultValue="system" />
+    <ListPreference app:key="language" app:title="@string/language" app:defaultValue="en" />
+    <SwitchPreferenceCompat app:key="app_lock" app:title="@string/app_lock" />
+    <Preference app:key="storage_management" app:title="@string/storage_management" />
+    <Preference app:key="about" app:title="@string/about" />
+    <Preference app:key="app_version" app:title="@string/app_version" />
+</PreferenceScreen>

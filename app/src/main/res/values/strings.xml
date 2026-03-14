@@ -736,4 +736,11 @@
     <string name="password_set_success">Password set successfully</string>
     <string name="pin_set_success">PIN set successfully</string>
     <string name="pattern_set_success">Pattern set successfully</string>
+    <string name="theme">Theme</string>
+    <string name="app_version">App Version</string>
+    <string name="enable_app_lock">Enable App Lock</string>
+    <string name="enable_biometric">Enable Biometric</string>
+    <string name="prevent_screenshots">Prevent Screenshots</string>
+    <string name="device_admin_enabled">Device admin enabled</string>
+    <string name="device_admin_disabled">Device admin disabled</string>
 </resources>

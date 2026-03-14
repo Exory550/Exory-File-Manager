@@ -202,6 +202,18 @@ class PreferenceManager @Inject constructor(
         get() = getInt("clean_interval", 7)
         set(value) = putInt("clean_interval", value)
 
+    var showHiddenFiles: Boolean
+        get() = getBoolean("show_hidden_files", false)
+        set(value) = putBoolean("show_hidden_files", value)
+
+    var passwordHash: String
+        get() = getString("password_hash", "")
+        set(value) = putString("password_hash", value)
+
+    var passwordHint: String
+        get() = getString("password_hint", "")
+        set(value) = putString("password_hint", value)
+
     companion object {
         const val THEME_LIGHT = 0
         const val THEME_DARK = 1

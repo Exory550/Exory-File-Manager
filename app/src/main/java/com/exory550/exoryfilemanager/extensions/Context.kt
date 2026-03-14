@@ -715,3 +715,17 @@ val Context.displayDensityName: String
         DisplayMetrics.DENSITY_XXXHIGH -> "XXXHDPI"
         else -> "Unknown"
     }
+
+val android.content.Context.cacheSize: Long
+    get() = cacheDir?.walkTopDown()?.filter { it.isFile }?.sumOf { it.length() } ?: 0L
+
+val android.content.Context.externalCacheSize: Long
+    get() = externalCacheDir?.walkTopDown()?.filter { it.isFile }?.sumOf { it.length() } ?: 0L
+
+fun android.content.Context.clearCache(): Boolean {
+    return try { cacheDir?.deleteRecursively() ?: false } catch (e: Exception) { false }
+}
+
+fun android.content.Context.clearExternalCache(): Boolean {
+    return try { externalCacheDir?.deleteRecursively() ?: false } catch (e: Exception) { false }
+}

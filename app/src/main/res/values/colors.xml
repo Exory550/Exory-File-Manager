@@ -84,4 +84,5 @@
     <color name="colorSecondary">#FF4081</color>
     <color name="colorSecondaryVariant">#FF4081</color>
     <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="success_color">#4CAF50</color>
 </resources>

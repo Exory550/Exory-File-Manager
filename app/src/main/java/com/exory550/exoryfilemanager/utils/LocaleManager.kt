@@ -8,4 +8,13 @@ import javax.inject.Singleton
 @Singleton
 class LocaleManager @Inject constructor(
     @ApplicationContext private val context: Context
-)
+) {
+    fun setLanguage(language: String) {
+        val prefs = context.getSharedPreferences("exory_prefs", Context.MODE_PRIVATE)
+        prefs.edit().putString("language", language).apply()
+    }
+
+    fun applyLocale(context: Context) {}
+
+    fun setLocale(context: Context): Context = context
+}

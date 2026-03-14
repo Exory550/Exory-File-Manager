@@ -104,9 +104,9 @@ class SettingsManageStorageFragment : SettingsAbstractFragment() {
     private fun getCleanIntervalSummary(): String {
         val interval = preferenceManager.cleanInterval
         return when (interval) {
-            1L -> getString(R.string.every_day)
-            7L -> getString(R.string.every_week)
-            30L -> getString(R.string.every_month)
+            1 -> getString(R.string.every_day)
+            7 -> getString(R.string.every_week)
+            30 -> getString(R.string.every_month)
             else -> getString(R.string.every_day)
         }
     }

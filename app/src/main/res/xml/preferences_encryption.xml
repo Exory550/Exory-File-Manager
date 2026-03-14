@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat app:key="enable_encryption" app:title="@string/enable_encryption" />
+    <Preference app:key="encryption_method" app:title="@string/encryption_method" />
+    <Preference app:key="change_encryption_password" app:title="@string/change_password" />
+    <SwitchPreferenceCompat app:key="encrypt_media" app:title="@string/encrypt_media" />
+    <SwitchPreferenceCompat app:key="encrypt_documents" app:title="@string/encrypt_documents" />
+    <SwitchPreferenceCompat app:key="encrypt_thumbnails" app:title="@string/encrypt_thumbnails" />
+    <SwitchPreferenceCompat app:key="secure_delete" app:title="@string/secure_delete" />
+    <Preference app:key="wipe_encrypted_data" app:title="@string/wipe_encrypted_data" />
+</PreferenceScreen>

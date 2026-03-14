@@ -1,5 +1,6 @@
 package com.exory550.exoryfilemanager.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.view.LayoutInflater
@@ -132,7 +133,7 @@ class ItemsFragment : Fragment() {
     }
 
     private fun openFile(fileItem: FileItem) {
-        val intent = Intent(requireContext(), FileViewerActivity::class.java).apply {
+        val intent = Intent(requireContext(), com.exory550.exoryfilemanager.activities.MainActivity::class.java).apply {
             putExtra(EXTRA_FILE_PATH, fileItem.path)
             putExtra(EXTRA_FILE_NAME, fileItem.name)
             putExtra(EXTRA_FILE_SIZE, fileItem.size)
