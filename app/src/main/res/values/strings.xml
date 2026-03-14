@@ -719,4 +719,23 @@
     <string name="export">Export</string>
     <string name="import_text">Import</string>
     <string name="search_settings">Search settings</string>
+    <string name="rotate_slow">rotate_slow</string>
+    <string name="pulse">pulse</string>
+    <string name="float">float</string>
+    <string name="success_color">#4CAF50</string>
+    <string name="thumbnail_cache_cleared">Thumbnail cache cleared</string>
+    <string name="encryption_enabled">Encryption enabled</string>
+    <string name="encryption_disabled">Encryption disabled</string>
+    <string name="encrypted_data_wiped">Encrypted data wiped</string>
+    <string name="disable_encryption">Disable Encryption</string>
+    <string name="disable_encryption_message">Are you sure you want to disable encryption?</string>
+    <string name="disable">Disable</string>
+    <string name="wipe_encrypted_data_message">This will permanently delete all encrypted data.</string>
+    <string name="wipe">Wipe</string>
+    <string name="password_changed">Password changed</string>
+    <string name="password_set_success">Password set successfully</string>
+    <string name="pin_set_success">PIN set successfully</string>
+    <string name="pattern_set_success">Pattern set successfully</string>
+    <string name="encryption_aes">AES-256-GCM</string>
+    <string name="encryption_chacha">ChaCha20</string>
 </resources>

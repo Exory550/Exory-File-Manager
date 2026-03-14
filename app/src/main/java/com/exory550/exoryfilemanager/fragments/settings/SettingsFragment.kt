@@ -104,7 +104,7 @@ class SettingsFragment : SettingsAbstractFragment() {
 
     private fun navigateToSecuritySettings() {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.settings_container, SettingsSecurityFragment())
+            .replace(R.id.settings_container, SettingsLockFragment())
             .addToBackStack(null)
             .commit()
     }

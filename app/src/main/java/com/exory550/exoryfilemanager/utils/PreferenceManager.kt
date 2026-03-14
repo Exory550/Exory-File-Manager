@@ -71,9 +71,9 @@ class PreferenceManager @Inject constructor(
         get() = getBoolean("app_lock_enabled", false)
         set(value) = putBoolean("app_lock_enabled", value)
 
-    var lockMethod: Int
-        get() = getInt("lock_method", 0)
-        set(value) = putInt("lock_method", value)
+    var lockMethod: String
+        get() = getString("lock_method", "password")
+        set(value) = putString("lock_method", value)
 
     var isPasswordSet: Boolean
         get() = getBoolean("is_password_set", false)
@@ -91,9 +91,9 @@ class PreferenceManager @Inject constructor(
         get() = getBoolean("biometric_enabled", false)
         set(value) = putBoolean("biometric_enabled", value)
 
-    var lockTimeout: Int
-        get() = getInt("lock_timeout", 0)
-        set(value) = putInt("lock_timeout", value)
+    var lockTimeout: Long
+        get() = getLong("lock_timeout", 0L)
+        set(value) = putLong("lock_timeout", value)
 
     var autoLock: Boolean
         get() = getBoolean("auto_lock", true)
@@ -132,9 +132,9 @@ class PreferenceManager @Inject constructor(
         get() = getBoolean("secure_delete", false)
         set(value) = putBoolean("secure_delete", value)
 
-    var encryptionMethod: Int
-        get() = getInt("encryption_method", 0)
-        set(value) = putInt("encryption_method", value)
+    var encryptionMethod: String
+        get() = getString("encryption_method", "aes")
+        set(value) = putString("encryption_method", value)
 
     var wipeAllEncryptedData: Boolean
         get() = getBoolean("wipe_encrypted", false)
