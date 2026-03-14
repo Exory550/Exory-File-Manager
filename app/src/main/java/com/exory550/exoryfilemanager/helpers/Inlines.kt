@@ -37,7 +37,7 @@ inline fun <reified T : Any> Intent.getParcelable(key: String): T? {
         getParcelableExtra(key, T::class.java)
     } else {
         @Suppress("DEPRECATION")
-        getParcelableExtra(key) as? T
+        getParcelableExtra<android.os.Parcelable>(key) as? T
     }
 }
 

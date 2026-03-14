@@ -44,9 +44,114 @@ class PreferenceManager @Inject constructor(
     fun clear() =
         prefs.edit().clear().apply()
 
+    // App settings
+    var preventScreenshots: Boolean
+        get() = getBoolean("prevent_screenshots", false)
+        set(value) = putBoolean("prevent_screenshots", value)
+
+    var isIntroCompleted: Boolean
+        get() = getBoolean("intro_completed", false)
+        set(value) = putBoolean("intro_completed", value)
+
+    var wasAppProtectionHandled: Boolean
+        get() = getBoolean("app_protection_handled", false)
+        set(value) = putBoolean("app_protection_handled", value)
+
+    // Theme & Language
+    var themeMode: Int
+        get() = getInt("theme_mode", THEME_SYSTEM)
+        set(value) = putInt("theme_mode", value)
+
+    var language: String
+        get() = getString("language", "en")
+        set(value) = putString("language", value)
+
+    // App Lock
+    var isAppLockEnabled: Boolean
+        get() = getBoolean("app_lock_enabled", false)
+        set(value) = putBoolean("app_lock_enabled", value)
+
+    var lockMethod: Int
+        get() = getInt("lock_method", 0)
+        set(value) = putInt("lock_method", value)
+
+    var isPasswordSet: Boolean
+        get() = getBoolean("is_password_set", false)
+        set(value) = putBoolean("is_password_set", value)
+
+    var isPinSet: Boolean
+        get() = getBoolean("is_pin_set", false)
+        set(value) = putBoolean("is_pin_set", value)
+
+    var isPatternSet: Boolean
+        get() = getBoolean("is_pattern_set", false)
+        set(value) = putBoolean("is_pattern_set", value)
+
+    var isBiometricEnabled: Boolean
+        get() = getBoolean("biometric_enabled", false)
+        set(value) = putBoolean("biometric_enabled", value)
+
+    var lockTimeout: Int
+        get() = getInt("lock_timeout", 0)
+        set(value) = putInt("lock_timeout", value)
+
+    var autoLock: Boolean
+        get() = getBoolean("auto_lock", true)
+        set(value) = putBoolean("auto_lock", value)
+
+    var lockOnScreenOff: Boolean
+        get() = getBoolean("lock_on_screen_off", true)
+        set(value) = putBoolean("lock_on_screen_off", value)
+
+    var showLockNotifications: Boolean
+        get() = getBoolean("show_lock_notifications", true)
+        set(value) = putBoolean("show_lock_notifications", value)
+
+    var hideNotificationContent: Boolean
+        get() = getBoolean("hide_notification_content", false)
+        set(value) = putBoolean("hide_notification_content", value)
+
+    // Encryption
+    var isEncryptionEnabled: Boolean
+        get() = getBoolean("encryption_enabled", false)
+        set(value) = putBoolean("encryption_enabled", value)
+
+    var isEncryptMediaEnabled: Boolean
+        get() = getBoolean("encrypt_media", false)
+        set(value) = putBoolean("encrypt_media", value)
+
+    var isEncryptDocumentsEnabled: Boolean
+        get() = getBoolean("encrypt_documents", false)
+        set(value) = putBoolean("encrypt_documents", value)
+
+    var isEncryptThumbnailsEnabled: Boolean
+        get() = getBoolean("encrypt_thumbnails", false)
+        set(value) = putBoolean("encrypt_thumbnails", value)
+
+    var isSecureDeleteEnabled: Boolean
+        get() = getBoolean("secure_delete", false)
+        set(value) = putBoolean("secure_delete", value)
+
+    var encryptionMethod: Int
+        get() = getInt("encryption_method", 0)
+        set(value) = putInt("encryption_method", value)
+
+    var wipeAllEncryptedData: Boolean
+        get() = getBoolean("wipe_encrypted", false)
+        set(value) = putBoolean("wipe_encrypted", value)
+
+    // Thumbnails
+    var showThumbnails: Boolean
+        get() = getBoolean("show_thumbnails", true)
+        set(value) = putBoolean("show_thumbnails", value)
+
     var generateImageThumbnails: Boolean
         get() = getBoolean("generate_image_thumbnails", true)
         set(value) = putBoolean("generate_image_thumbnails", value)
+
+    var generateVideoThumbnails: Boolean
+        get() = getBoolean("generate_video_thumbnails", true)
+        set(value) = putBoolean("generate_video_thumbnails", value)
 
     var generateDocumentThumbnails: Boolean
         get() = getBoolean("generate_document_thumbnails", true)
@@ -68,23 +173,40 @@ class PreferenceManager @Inject constructor(
         get() = getBoolean("cache_thumbnails", true)
         set(value) = putBoolean("cache_thumbnails", value)
 
-    var preventScreenshots: Boolean
-        get() = getBoolean("prevent_screenshots", false)
-        set(value) = putBoolean("prevent_screenshots", value)
+    // Storage
+    var defaultStoragePath: String
+        get() = getString("default_storage_path", "")
+        set(value) = putString("default_storage_path", value)
 
-    var isIntroCompleted: Boolean
-        get() = getBoolean("intro_completed", false)
-        set(value) = putBoolean("intro_completed", value)
+    var autoCleanEnabled: Boolean
+        get() = getBoolean("auto_clean_enabled", false)
+        set(value) = putBoolean("auto_clean_enabled", value)
 
-    var isAppLockEnabled: Boolean
-        get() = getBoolean("app_lock_enabled", false)
-        set(value) = putBoolean("app_lock_enabled", value)
+    var deleteEmptyFolders: Boolean
+        get() = getBoolean("delete_empty_folders", false)
+        set(value) = putBoolean("delete_empty_folders", value)
 
-    var wasAppProtectionHandled: Boolean
-        get() = getBoolean("app_protection_handled", false)
-        set(value) = putBoolean("app_protection_handled", value)
+    var deleteThumbnails: Boolean
+        get() = getBoolean("delete_thumbnails", false)
+        set(value) = putBoolean("delete_thumbnails", value)
+
+    var deleteApkFiles: Boolean
+        get() = getBoolean("delete_apk_files", false)
+        set(value) = putBoolean("delete_apk_files", value)
+
+    var deleteLogFiles: Boolean
+        get() = getBoolean("delete_log_files", false)
+        set(value) = putBoolean("delete_log_files", value)
+
+    var cleanInterval: Int
+        get() = getInt("clean_interval", 7)
+        set(value) = putInt("clean_interval", value)
 
     companion object {
+        const val THEME_LIGHT = 0
+        const val THEME_DARK = 1
+        const val THEME_SYSTEM = 2
+
         @Volatile
         private var instance: PreferenceManager? = null
 
