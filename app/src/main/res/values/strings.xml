@@ -743,4 +743,5 @@
     <string name="prevent_screenshots">Prevent Screenshots</string>
     <string name="device_admin_enabled">Device admin enabled</string>
     <string name="device_admin_disabled">Device admin disabled</string>
+    <string name="checking_updates">Checking for updates...</string>
 </resources>

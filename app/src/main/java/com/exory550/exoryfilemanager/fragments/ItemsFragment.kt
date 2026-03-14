@@ -103,7 +103,7 @@ class ItemsFragment : Fragment() {
                 applySorting()
                 updateUI()
             } catch (e: Exception) {
-                com.exory550.exoryfilemanager.extensions.showToast(requireContext(), R.string.error_loading_directory)
+                android.widget.Toast.makeText(requireContext(), R.string.error_loading_directory, android.widget.Toast.LENGTH_SHORT).show()
             } finally {
                 binding.progressBar.visibility = View.GONE
             }
@@ -115,11 +115,10 @@ class ItemsFragment : Fragment() {
 
         if (currentFiles.isEmpty()) {
             binding.recyclerView.visibility = View.GONE
-            binding.emptyView.root.visibility = View.VISIBLE
-            binding.emptyView.emptyText.text = getString(R.string.folder_empty)
+            binding.emptyView.visibility = View.VISIBLE
         } else {
             binding.recyclerView.visibility = View.VISIBLE
-            binding.emptyView.root.visibility = View.GONE
+            binding.emptyView.visibility = View.GONE
         }
 
         binding.pathTextView.text = currentPath

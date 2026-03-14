@@ -123,7 +123,7 @@ abstract class SettingsAbstractFragment : PreferenceFragmentCompat() {
             val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url))
             startActivity(intent)
         } catch (e: Exception) {
-            com.exory550.exoryfilemanager.extensions.showToast(requireContext(), R.string.cannot_open_url)
+            android.widget.Toast.makeText(requireContext(), R.string.cannot_open_url, android.widget.Toast.LENGTH_SHORT).show()
         }
     }
 }

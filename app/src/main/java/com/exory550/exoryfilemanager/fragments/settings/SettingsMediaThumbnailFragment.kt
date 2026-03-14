@@ -143,6 +143,6 @@ class SettingsMediaThumbnailFragment : SettingsAbstractFragment() {
     }
 
     private fun clearThumbnailCache() {
-        com.exory550.exoryfilemanager.extensions.showToast(requireContext(), R.string.thumbnail_cache_cleared)
+        android.widget.Toast.makeText(requireContext(), R.string.thumbnail_cache_cleared, android.widget.Toast.LENGTH_SHORT).show()
     }
 }

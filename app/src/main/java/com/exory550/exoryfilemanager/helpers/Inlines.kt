@@ -36,7 +36,7 @@ inline fun <reified T : Any> Intent.getParcelable(key: String): T? {
     return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
         getParcelableExtra(key, T::class.java)
     } else {
-        @Suppress("DEPRECATION")
+        @Suppress("DEPRECATION", "UNCHECKED_CAST")
         getParcelableExtra<android.os.Parcelable>(key) as? T
     }
 }

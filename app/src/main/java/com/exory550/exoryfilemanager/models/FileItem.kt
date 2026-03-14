@@ -10,4 +10,6 @@ data class FileItem(
     val isHidden: Boolean = false,
     val isSelected: Boolean = false,
     val mimeType: String = ""
-)
+) {
+    val extension: String get() = if (isDirectory) "" else name.substringAfterLast(".", "")
+}
