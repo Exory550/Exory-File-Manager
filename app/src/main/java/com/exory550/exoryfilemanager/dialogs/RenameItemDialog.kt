@@ -23,7 +23,7 @@ import java.io.File
 
 class RenameItemDialog(
     context: Context,
-    private val fileItem: ExoryExoryFileItem,
+    private val fileItem: FileItem,
     private val onRenamed: (String) -> Unit,
     private val onCancel: (() -> Unit)? = null
 ) : Dialog(context, R.style.Theme_ExoryFileManager_Dialog) {
@@ -327,7 +327,7 @@ class RenameItemDialog(
 
         fun show(
             context: Context,
-            fileItem: ExoryExoryFileItem,
+            fileItem: FileItem,
             onRenamed: (String) -> Unit,
             onCancel: (() -> Unit)? = null
         ) {
@@ -340,7 +340,7 @@ class RenameItemDialog(
             onRenamed: (String) -> Unit,
             onCancel: (() -> Unit)? = null
         ) {
-            val fileItem = ExoryFileItem(
+            val fileItem = FileItem(
                 name = file.name,
                 path = file.absolutePath,
                 size = file.length(),

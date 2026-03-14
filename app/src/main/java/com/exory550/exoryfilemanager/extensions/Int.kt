@@ -210,18 +210,6 @@ val Int.withOrdinal: String
 /**
  * Convert long to formatted file size
  */
-fun Long.toFormattedFileSize(): String {
-    val units = arrayOf("B", "KB", "MB", "GB", "TB", "PB")
-    var size = this.toDouble()
-    var unitIndex = 0
-    
-    while (size >= 1024 && unitIndex < units.size - 1) {
-        size /= 1024
-        unitIndex++
-    }
-    
-    return String.format("%.1f %s", size, units[unitIndex])
-}
 
 /**
  * Convert long to file size string with specific decimal places

@@ -74,17 +74,17 @@ class MainActivity : BaseAbstractActivity(),
     lateinit var preferenceManager: PreferenceManager
     
     private var currentPath: String = Environment.getExternalStorageDirectory().absolutePath
-    private var currentFiles: List<ExoryFileItem> = emptyList()
-    private var selectedFiles: MutableSet<ExoryFileItem> = mutableSetOf()
+    private var currentFiles: List<FileItem> = emptyList()
+    private var selectedFiles: MutableSet<FileItem> = mutableSetOf()
     private var isSelectionMode = false
     private var isSearchMode = false
     private var currentViewMode = VIEW_MODE_LIST
     private var currentSortMode = SORT_BY_NAME
     private var sortAscending = true
-    private var clipboard: MutableList<ExoryFileItem> = mutableListOf()
+    private var clipboard: MutableList<FileItem> = mutableListOf()
     private var clipboardOperation = Constants.COPY_OPERATION
     
-    private val searchResults = MutableStateFlow<List<ExoryFileItem>>(emptyList())
+    private val searchResults = MutableStateFlow<List<FileItem>>(emptyList())
     
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -341,7 +341,7 @@ class MainActivity : BaseAbstractActivity(),
         }
     }
     
-    override fun onFileClick(file: ExoryExoryFileItem) {
+    override fun onFileClick(file: FileItem) {
         when {
             isSelectionMode -> toggleSelection(file)
             file.isDirectory -> loadDirectory(file.path)
@@ -350,7 +350,7 @@ class MainActivity : BaseAbstractActivity(),
         }
     }
     
-    override fun onFileLongClick(file: ExoryExoryFileItem): Boolean {
+    override fun onFileLongClick(file: FileItem): Boolean {
         if (!isSelectionMode && !isSearchMode) {
             enterSelectionMode()
             toggleSelection(file)
@@ -358,7 +358,7 @@ class MainActivity : BaseAbstractActivity(),
         return true
     }
     
-    private fun openFile(file: ExoryExoryFileItem) {
+    private fun openFile(file: FileItem) {
         val intent = Intent(this, FileViewerActivity::class.java).apply {
             putExtra(Constants.EXTRA_FILE_PATH, file.path)
             putExtra(Constants.EXTRA_FILE_NAME, file.name)
@@ -368,7 +368,7 @@ class MainActivity : BaseAbstractActivity(),
         startActivityWithAnimation(intent)
     }
     
-    private fun openCompressedFile(file: ExoryExoryFileItem) {
+    private fun openCompressedFile(file: FileItem) {
         MaterialAlertDialogBuilder(this)
             .setTitle(R.string.open_compressed_file)
             .setMessage(R.string.open_compressed_file_message)
@@ -382,7 +382,7 @@ class MainActivity : BaseAbstractActivity(),
             .show()
     }
     
-    private fun extractFile(file: ExoryExoryFileItem) {
+    private fun extractFile(file: FileItem) {
         lifecycleScope.launch {
             showProgress(R.string.extracting)
             
@@ -443,7 +443,7 @@ class MainActivity : BaseAbstractActivity(),
         invalidateOptionsMenu()
     }
     
-    private fun toggleSelection(file: ExoryExoryFileItem) {
+    private fun toggleSelection(file: FileItem) {
         if (selectedFiles.contains(file)) {
             selectedFiles.remove(file)
         } else {
@@ -604,7 +604,7 @@ class MainActivity : BaseAbstractActivity(),
         }.show()
     }
     
-    private fun renameFile(file: ExoryExoryFileItem, newName: String) {
+    private fun renameFile(file: FileItem, newName: String) {
         lifecycleScope.launch {
             showProgress(R.string.renaming)
             

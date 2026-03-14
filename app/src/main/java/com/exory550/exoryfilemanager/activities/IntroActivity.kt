@@ -184,7 +184,7 @@ class IntroActivity : BaseAbstractActivity() {
         window.navigationBarColor = color
     }
     
-    private fun completeIntro() {
+    fun completeIntro() {
         // Mark intro as completed
         preferenceManager.isIntroCompleted = true
         

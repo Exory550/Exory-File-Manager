@@ -38,7 +38,7 @@ import java.util.*
 
 class PropertiesDialog(
     context: Context,
-    private val files: List<ExoryFileItem>,
+    private val files: List<FileItem>,
     private val onPropertiesChanged: (() -> Unit)? = null
 ) : Dialog(context, R.style.Theme_ExoryFileManager_Dialog_FullScreen) {
 
@@ -161,7 +161,7 @@ class PropertiesDialog(
         }.attach()
     }
     
-    private fun loadProperties(fileItem: ExoryExoryFileItem): FileProperties {
+    private fun loadProperties(fileItem: FileItem): FileProperties {
         val file = File(fileItem.path)
         
         return FileProperties(
@@ -423,7 +423,7 @@ class PropertiesDialog(
     companion object {
         fun show(
             context: Context,
-            file: ExoryExoryFileItem,
+            file: FileItem,
             onPropertiesChanged: (() -> Unit)? = null
         ) {
             PropertiesDialog(context, listOf(file), onPropertiesChanged).show()
@@ -431,7 +431,7 @@ class PropertiesDialog(
         
         fun show(
             context: Context,
-            files: List<ExoryFileItem>,
+            files: List<FileItem>,
             onPropertiesChanged: (() -> Unit)? = null
         ) {
             PropertiesDialog(context, files, onPropertiesChanged).show()

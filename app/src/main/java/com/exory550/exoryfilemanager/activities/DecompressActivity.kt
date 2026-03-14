@@ -58,8 +58,8 @@ class DecompressActivity : BaseAbstractActivity() {
     
     private var compressedFile: CompressedFile? = null
     private var currentPath: String = ""
-    private var extractedFiles: MutableList<ExoryFileItem> = mutableListOf()
-    private var selectedFiles: MutableSet<ExoryFileItem> = mutableSetOf()
+    private var extractedFiles: MutableList<FileItem> = mutableListOf()
+    private var selectedFiles: MutableSet<FileItem> = mutableSetOf()
     private var isSelectionMode = false
     private var currentViewMode = VIEW_MODE_LIST
     private var currentSortMode = SORT_BY_NAME
@@ -297,7 +297,7 @@ class DecompressActivity : BaseAbstractActivity() {
         }
     }
     
-    private fun openFile(fileItem: ExoryExoryFileItem) {
+    private fun openFile(fileItem: FileItem) {
         when {
             fileItem.isDirectory -> {
                 currentPath = fileItem.path
@@ -312,7 +312,7 @@ class DecompressActivity : BaseAbstractActivity() {
         }
     }
     
-    private fun openCompressedFile(fileItem: ExoryExoryFileItem) {
+    private fun openCompressedFile(fileItem: FileItem) {
         MaterialAlertDialogBuilder(this)
             .setTitle(R.string.open_compressed_file)
             .setMessage(R.string.open_compressed_file_message)
@@ -327,7 +327,7 @@ class DecompressActivity : BaseAbstractActivity() {
             .show()
     }
     
-    private fun previewFile(fileItem: ExoryExoryFileItem) {
+    private fun previewFile(fileItem: FileItem) {
         val intent = Intent(this, FileViewerActivity::class.java).apply {
             putExtra(Constants.EXTRA_FILE_PATH, fileItem.path)
             putExtra(Constants.EXTRA_FILE_NAME, fileItem.name)
@@ -411,7 +411,7 @@ class DecompressActivity : BaseAbstractActivity() {
         }
     }
     
-    private fun extractSingleFile(fileItem: ExoryExoryFileItem) {
+    private fun extractSingleFile(fileItem: FileItem) {
         lifecycleScope.launch {
             showProgress(R.string.extracting)
             
@@ -491,7 +491,7 @@ class DecompressActivity : BaseAbstractActivity() {
         binding.toolbar.title = compressedFile?.name ?: ""
     }
     
-    private fun toggleSelection(fileItem: ExoryExoryFileItem) {
+    private fun toggleSelection(fileItem: FileItem) {
         if (selectedFiles.contains(fileItem)) {
             selectedFiles.remove(fileItem)
         } else {
@@ -530,7 +530,7 @@ class DecompressActivity : BaseAbstractActivity() {
         })
         
         // Folders first
-        extractedFiles.sortWith(compareByDescending<ExoryFileItem> { it.isDirectory }.thenBy { it.name.lowercase() })
+        extractedFiles.sortWith(compareByDescending<FileItem> { it.isDirectory }.thenBy { it.name.lowercase() })
     }
     
     private fun showSortDialog() {

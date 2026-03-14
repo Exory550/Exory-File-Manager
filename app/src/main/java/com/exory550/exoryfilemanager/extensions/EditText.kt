@@ -472,15 +472,6 @@ fun TextInputLayout.hasMinLength(minLength: Int): Boolean {
 /**
  * Get text from TextView safely
  */
-val TextView.safeText: String
-    get() = text?.toString() ?: ""
-
-/**
- * Set text with formatting
- */
-fun TextView.setTextWithFormat(format: String, vararg args: Any?) {
-    text = String.format(format, *args)
-}
 
 /**
  * Set text with resource formatting
@@ -492,10 +483,6 @@ fun TextView.setTextWithFormat(formatRes: Int, vararg args: Any?) {
 /**
  * Append line
  */
-fun TextView.appendLine(text: CharSequence) {
-    append(text)
-    append("\n")
-}
 
 /**
  * Extension functions for common input validation

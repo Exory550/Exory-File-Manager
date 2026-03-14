@@ -274,18 +274,6 @@ fun Long.toFileSize(context: Context? = null): String {
 /**
  * Converts number to a file size string with custom formatting
  */
-fun Long.toFormattedFileSize(): String {
-    val units = arrayOf("B", "KB", "MB", "GB", "TB")
-    var size = this.toDouble()
-    var unitIndex = 0
-    
-    while (size >= 1024 && unitIndex < units.size - 1) {
-        size /= 1024
-        unitIndex++
-    }
-    
-    return String.format("%.2f %s", size, units[unitIndex])
-}
 
 /**
  * Converts milliseconds to a time string (HH:MM:SS)
