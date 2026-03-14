@@ -18,10 +18,7 @@ jobs:
       - name: Build Debug APK
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --stacktrace
-          echo "=== Finding APK files ==="
-          find . -name "*.apk" 2>/dev/null
-          find . -name "*.aab" 2>/dev/null
+          ./gradlew assembleDebug --info 2>&1 | grep -A5 "NullPointerException\|\[ksp\]\|error:" | head -80
       - name: Upload Build Log
         if: always()
         uses: actions/upload-artifact@v4.6.2
