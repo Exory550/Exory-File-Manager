@@ -122,33 +122,6 @@ data class FileDirItem(
 
     override fun describeContents(): Int = 0
 
-    fun copy(
-        path: String = this.path,
-        name: String = this.name,
-        size: Long = this.size,
-        lastModified: Long = this.lastModified,
-        isDirectory: Boolean = this.isDirectory,
-        isHidden: Boolean = this.isHidden,
-        isSelected: Boolean = this.isSelected,
-        isCut: Boolean = this.isCut,
-        permissions: String? = this.permissions,
-        owner: String? = this.owner,
-        group: String? = this.group,
-        mimeType: String? = this.mimeType,
-        thumbnailPath: String? = this.thumbnailPath,
-        itemCount: Int = this.itemCount,
-        containsMedia: Boolean = this.containsMedia,
-        isEncrypted: Boolean = this.isEncrypted,
-        isFavorite: Boolean = this.isFavorite,
-        tags: List<String> = this.tags,
-        dateAdded: Long = this.dateAdded
-    ): FileDirItem {
-        return FileDirItem(
-            path, name, size, lastModified, isDirectory, isHidden, isSelected, isCut,
-            permissions, owner, group, mimeType, thumbnailPath, itemCount, containsMedia,
-            isEncrypted, isFavorite, tags, dateAdded
-        )
-    }
 
     companion object CREATOR : Parcelable.Creator<FileDirItem> {
         override fun createFromParcel(parcel: Parcel): FileDirItem {

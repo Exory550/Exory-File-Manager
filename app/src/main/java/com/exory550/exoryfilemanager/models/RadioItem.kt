@@ -43,22 +43,6 @@ data class RadioItem(
 
     override fun describeContents(): Int = 0
 
-    fun copy(
-        id: Long = this.id,
-        title: String = this.title,
-        description: String? = this.description,
-        iconRes: Int? = this.iconRes,
-        iconDrawable: Drawable? = this.iconDrawable,
-        isEnabled: Boolean = this.isEnabled,
-        isSelected: Boolean = this.isSelected,
-        tag: Any? = this.tag,
-        groupId: Int = this.groupId
-    ): RadioItem {
-        return RadioItem(
-            id, title, description, iconRes, iconDrawable,
-            isEnabled, isSelected, tag, groupId
-        )
-    }
 
     companion object CREATOR : Parcelable.Creator<RadioItem> {
         override fun createFromParcel(parcel: Parcel): RadioItem {
