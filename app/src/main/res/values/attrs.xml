@@ -15,4 +15,5 @@
     <attr name="windowLightNavigationBar" format="boolean" />
     <attr name="iconTintInverse" format="color" />
     <attr name="menuTint" format="color" />
+    <attr name="colorOnPrimarySecondary" format="color" />
 </resources>
