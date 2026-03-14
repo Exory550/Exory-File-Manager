@@ -385,7 +385,7 @@ abstract class BaseAbstractActivity : AppCompatActivity() {
     
     protected fun <T> Flow<T>.launchAndCollect(collector: suspend (T) -> Unit) {
         lifecycleScope.launch {
-            this@launchAndcollect.collectLatest(collector)
+            this@launchAndCollect.collectLatest(collector)
         }
     }
     
