@@ -8,7 +8,7 @@ import javax.inject.Singleton
 @Singleton
 class EncryptionManager @Inject constructor(
     @ApplicationContext private val context: Context
-)
+) {
     fun wipeAllEncryptedData() {}
 
     fun hashPassword(password: String): String {
