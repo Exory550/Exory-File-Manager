@@ -50,7 +50,7 @@ android {
 
     buildFeatures {
         viewBinding = true
-        dataBinding = false
+        dataBinding = true
         buildConfig = true
         compose = true
     }
