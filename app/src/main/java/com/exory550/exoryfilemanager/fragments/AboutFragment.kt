@@ -6,85 +6,55 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.exory550.exoryfilemanager.BuildConfig
 import com.exory550.exoryfilemanager.R
-import com.exory550.exoryfilemanager.databinding.FragmentAboutBinding
-import com.exory550.exoryfilemanager.dialogs.ConfirmationDialog
-import com.exory550.exoryfilemanager.dialogs.LicensesDialog
-import com.exory550.exoryfilemanager.extensions.openUrl
-import com.exory550.exoryfilemanager.extensions.shareText
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class AboutFragment : Fragment() {
-
-    private var _binding: FragmentAboutBinding? = null
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAboutBinding.inflate(inflater, container, false)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_about, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        setupViews()
-        setupClickListeners()
+        setupClickListeners(view)
     }
 
-    private fun setupViews() {
-        binding.appVersionText.text = String.format(
-            "%s (%d)",
-            BuildConfig.VERSION_NAME,
-            BuildConfig.VERSION_CODE
-        )
-
-        binding.buildTypeText.text = if (BuildConfig.DEBUG) "Debug" else "Release"
-    }
-
-    private fun setupClickListeners() {
-        binding.privacyPolicyCard.setOnClickListener {
+    private fun setupClickListeners(view: View) {
+        view.findViewById<View>(R.id.privacyPolicyCard)?.setOnClickListener {
             openUrl("https://exory550.com/privacy")
         }
-
-        binding.termsOfServiceCard.setOnClickListener {
+        view.findViewById<View>(R.id.termsOfServiceCard)?.setOnClickListener {
             openUrl("https://exory550.com/terms")
         }
-
-        binding.openSourceLicensesCard.setOnClickListener {
-            showLicensesDialog()
-        }
-
-        binding.rateAppCard.setOnClickListener {
+        view.findViewById<View>(R.id.rateAppCard)?.setOnClickListener {
             rateApp()
         }
-
-        binding.shareAppCard.setOnClickListener {
+        view.findViewById<View>(R.id.shareAppCard)?.setOnClickListener {
             shareApp()
         }
-
-        binding.checkUpdatesCard.setOnClickListener {
-            checkForUpdates()
+        view.findViewById<View>(R.id.checkUpdatesCard)?.setOnClickListener {
+            Toast.makeText(requireContext(), R.string.checking_updates, Toast.LENGTH_SHORT).show()
         }
-
-        binding.feedbackCard.setOnClickListener {
+        view.findViewById<View>(R.id.feedbackCard)?.setOnClickListener {
             sendFeedback()
-        }
-
-        binding.developerInfoLayout.setOnClickListener {
-            toggleDeveloperInfo()
         }
     }
 
-    private fun showLicensesDialog() {
-        LicensesDialog.show(childFragmentManager)
+    private fun openUrl(url: String) {
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), R.string.cannot_open_url, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun rateApp() {
@@ -96,49 +66,28 @@ class AboutFragment : Fragment() {
     }
 
     private fun shareApp() {
-        val shareText = getString(
-            R.string.share_app_text,
-            "https://play.google.com/store/apps/details?id=${requireContext().packageName}"
-        )
-        requireContext().shareText(shareText, getString(R.string.share_app_title))
-    }
-
-    private fun checkForUpdates() {
-        com.exory550.exoryfilemanager.extensions.showToast(requireContext(), R.string.checking_updates)
+        val shareText = "Check out Exory File Manager: https://play.google.com/store/apps/details?id=${requireContext().packageName}"
+        val intent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, shareText)
+        }
+        startActivity(Intent.createChooser(intent, getString(R.string.share_app_title)))
     }
 
     private fun sendFeedback() {
         val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse("mailto:")
             putExtra(Intent.EXTRA_EMAIL, arrayOf("support@exory550.com"))
-            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.feedback_email_subject, BuildConfig.VERSION_NAME))
+            putExtra(Intent.EXTRA_SUBJECT, "Feedback - Exory File Manager v${BuildConfig.VERSION_NAME}")
         }
-
         try {
             startActivity(Intent.createChooser(emailIntent, getString(R.string.send_feedback)))
         } catch (e: Exception) {
-            com.exory550.exoryfilemanager.extensions.showToast(requireContext(), R.string.no_email_app_found)
+            Toast.makeText(requireContext(), R.string.no_email_app_found, Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun toggleDeveloperInfo() {
-        if (binding.developerInfoContent.visibility == View.VISIBLE) {
-            binding.developerInfoContent.visibility = View.GONE
-            binding.expandIcon.setImageResource(R.drawable.ic_expand_more)
-        } else {
-            binding.developerInfoContent.visibility = View.VISIBLE
-            binding.expandIcon.setImageResource(R.drawable.ic_expand_less)
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     companion object {
-        fun newInstance(): AboutFragment {
-            return AboutFragment()
-        }
+        fun newInstance(): AboutFragment = AboutFragment()
     }
 }

@@ -1,5 +1,7 @@
 package com.exory550.exoryfilemanager.extensions
 
+import java.nio.charset.Charset
+
 import android.system.ErrnoException
 import android.system.Os
 import java.io.*

@@ -1,5 +1,7 @@
 package com.exory550.exoryfilemanager.extensions
 
+import android.content.res.Resources
+
 import android.animation.*
 import android.app.Activity
 import android.content.Context
