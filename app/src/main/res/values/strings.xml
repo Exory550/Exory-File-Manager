@@ -736,6 +736,4 @@
     <string name="password_set_success">Password set successfully</string>
     <string name="pin_set_success">PIN set successfully</string>
     <string name="pattern_set_success">Pattern set successfully</string>
-    <string name="encryption_aes">AES-256-GCM</string>
-    <string name="encryption_chacha">ChaCha20</string>
 </resources>
