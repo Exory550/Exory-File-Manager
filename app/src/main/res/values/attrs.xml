@@ -13,4 +13,6 @@
     <attr name="colorBackground" format="color" />
     <attr name="windowLightStatusBar" format="boolean" />
     <attr name="windowLightNavigationBar" format="boolean" />
+    <attr name="iconTintInverse" format="color" />
+    <attr name="menuTint" format="color" />
 </resources>
