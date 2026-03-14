@@ -2,20 +2,21 @@ package com.exory550.exoryfilemanager.services
 
 import android.app.Service
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.IBinder
-import com.exory550.exoryfilemanager.utils.PreferenceManager
+import android.preference.PreferenceManager as AndroidPreferenceManager
 
 class UnlockAppService : Service() {
 
-    private lateinit var preferenceManager: PreferenceManager
+    private lateinit var prefs: SharedPreferences
 
     override fun onCreate() {
         super.onCreate()
-        preferenceManager = PreferenceManager.getInstance(this)
+        prefs = AndroidPreferenceManager.getDefaultSharedPreferences(this)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        preferenceManager.wasAppProtectionHandled = true
+        prefs.edit().putBoolean("was_app_protection_handled", true).apply()
         stopSelf()
         return START_NOT_STICKY
     }

@@ -74,7 +74,7 @@ class PrefCrypto(private val context: Context) {
         return object : SharedPreferences {
             private val prefs = context.getSharedPreferences("${PREFS_NAME}_encrypted", Context.MODE_PRIVATE)
 
-            override fun edit(): Editor = EditorImpl(prefs.edit(), secretKey)
+            override fun edit(): SharedPreferences.Editor = EditorImpl(prefs.edit(), secretKey)
 
             override fun getAll(): MutableMap<String, *> {
                 val map = mutableMapOf<String, Any>()

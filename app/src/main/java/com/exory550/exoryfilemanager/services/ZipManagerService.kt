@@ -7,7 +7,6 @@ import android.os.Binder
 import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
-import com.exory550.exoryfilemanager.R
 import com.exory550.exoryfilemanager.activities.MainActivity
 import com.exory550.exoryfilemanager.helpers.Constants
 import com.exory550.exoryfilemanager.interfaces.ZipOperationListener
@@ -102,7 +101,7 @@ class ZipManagerService : Service() {
                 showErrorNotification("Compression failed", error)
                 stopSelf()
             }
-        }).execute(files.toTypedArray(), destination, password)
+        }).execute(arrayOf(files), destination, password)
     }
 
     fun decompressFile(

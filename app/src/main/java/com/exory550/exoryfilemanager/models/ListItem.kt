@@ -101,7 +101,7 @@ sealed class ListItem : Parcelable {
 
     data class DividerItem(
         override val id: Long,
-        override val title: String? = null,
+        override val title: String = "",
         override val isEnabled: Boolean = true,
         override val isSelected: Boolean = false,
         override val tag: Any? = null
