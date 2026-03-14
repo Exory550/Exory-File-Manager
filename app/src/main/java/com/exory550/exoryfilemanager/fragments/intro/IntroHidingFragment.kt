@@ -79,7 +79,7 @@ class IntroHidingFragment : Fragment() {
         ivIcon.startAnimation(rotateAnimation)
         
         // Files floating animation
-        val floatAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.float)
+        val floatAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.floating)
         ivFile1.startAnimation(floatAnimation)
         ivFile2.startAnimation(floatAnimation)
         ivFile3.startAnimation(floatAnimation)

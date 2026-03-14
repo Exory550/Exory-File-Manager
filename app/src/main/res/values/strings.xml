@@ -721,7 +721,7 @@
     <string name="search_settings">Search settings</string>
     <string name="rotate_slow">rotate_slow</string>
     <string name="pulse">pulse</string>
-    <string name="float">float</string>
+    <string name="floating">float</string>
     <string name="success_color">#4CAF50</string>
     <string name="thumbnail_cache_cleared">Thumbnail cache cleared</string>
     <string name="encryption_enabled">Encryption enabled</string>

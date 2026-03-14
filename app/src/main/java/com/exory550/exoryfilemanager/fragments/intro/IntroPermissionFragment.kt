@@ -83,7 +83,7 @@ class IntroPermissionFragment : Fragment() {
         val pulseAnimation = android.view.animation.AnimationUtils.loadAnimation(requireContext(), R.anim.pulse)
         ivIcon.startAnimation(pulseAnimation)
 
-        val floatAnimation = android.view.animation.AnimationUtils.loadAnimation(requireContext(), R.anim.float)
+        val floatAnimation = android.view.animation.AnimationUtils.loadAnimation(requireContext(), R.anim.floating)
         ivStorage.startAnimation(floatAnimation)
         ivManageStorage.startAnimation(floatAnimation)
         ivNotification.startAnimation(floatAnimation)
