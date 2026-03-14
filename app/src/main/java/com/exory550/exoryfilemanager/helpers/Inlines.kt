@@ -161,7 +161,7 @@ inline fun Fragment.toast(messageRes: Int, duration: Int = Toast.LENGTH_SHORT) {
     requireContext().toast(messageRes, duration)
 }
 
-inline fun <T> lazyFast(initializer: () -> T): Lazy<T> = lazy(LazyThreadSafetyMode.NONE, initializer)
+fun <T> lazyFast(initializer: () -> T): Lazy<T> = lazy(LazyThreadSafetyMode.NONE, initializer)
 
 inline fun <T> measureTimeMillis(block: () -> T): Pair<T, Long> {
     val start = System.currentTimeMillis()
@@ -186,8 +186,8 @@ inline fun <R> runCatchingLog(block: () -> R): R? {
     }
 }
 
-inline fun <T, R> Iterable<T>.parallelMap(transform: (T) -> R): List<R> {
-    return stream().parallel().map { transform(it) }.toList()
+fun <T, R> Iterable<T>.parallelMap(transform: (T) -> R): List<R> {
+    return map { transform(it) }
 }
 
 inline fun repeatTimes(times: Int, action: (Int) -> Unit) {

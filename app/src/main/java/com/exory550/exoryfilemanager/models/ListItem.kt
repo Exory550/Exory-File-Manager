@@ -106,6 +106,7 @@ sealed class ListItem : Parcelable {
         override val isSelected: Boolean = false,
         override val tag: Any? = null
     ) : ListItem() {
+        override val title: String get() = titleText ?: ""
         override val subtitle: String? = null
         override val iconRes: Int? = null
         override val iconUrl: String? = null

@@ -43,4 +43,55 @@ class PreferenceManager @Inject constructor(
 
     fun clear() =
         prefs.edit().clear().apply()
+
+    var generateImageThumbnails: Boolean
+        get() = getBoolean("generate_image_thumbnails", true)
+        set(value) = putBoolean("generate_image_thumbnails", value)
+
+    var generateDocumentThumbnails: Boolean
+        get() = getBoolean("generate_document_thumbnails", true)
+        set(value) = putBoolean("generate_document_thumbnails", value)
+
+    var thumbnailCacheSize: Int
+        get() = getInt("thumbnail_cache_size", 100)
+        set(value) = putInt("thumbnail_cache_size", value)
+
+    var thumbnailQuality: Int
+        get() = getInt("thumbnail_quality", 80)
+        set(value) = putInt("thumbnail_quality", value)
+
+    var thumbnailSize: Int
+        get() = getInt("thumbnail_size", 256)
+        set(value) = putInt("thumbnail_size", value)
+
+    var cacheThumbnails: Boolean
+        get() = getBoolean("cache_thumbnails", true)
+        set(value) = putBoolean("cache_thumbnails", value)
+
+    var preventScreenshots: Boolean
+        get() = getBoolean("prevent_screenshots", false)
+        set(value) = putBoolean("prevent_screenshots", value)
+
+    var isIntroCompleted: Boolean
+        get() = getBoolean("intro_completed", false)
+        set(value) = putBoolean("intro_completed", value)
+
+    var isAppLockEnabled: Boolean
+        get() = getBoolean("app_lock_enabled", false)
+        set(value) = putBoolean("app_lock_enabled", value)
+
+    var wasAppProtectionHandled: Boolean
+        get() = getBoolean("app_protection_handled", false)
+        set(value) = putBoolean("app_protection_handled", value)
+
+    companion object {
+        @Volatile
+        private var instance: PreferenceManager? = null
+
+        fun getInstance(context: Context): PreferenceManager {
+            return instance ?: synchronized(this) {
+                instance ?: PreferenceManager(context).also { instance = it }
+            }
+        }
+    }
 }

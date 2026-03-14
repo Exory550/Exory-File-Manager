@@ -77,7 +77,7 @@ class FastScroller @JvmOverloads constructor(
 
             if (verticalScrollRange - verticalScrollExtent > 0) {
                 val proportion = verticalScrollOffset.toFloat() / (verticalScrollRange - verticalScrollExtent)
-                val thumbTop = proportion * (height - thumbHeight)
+                val thumbTop = proportion * (height - thumbHeight).toFloat()
                 thumbRect.top = thumbTop
                 thumbRect.bottom = thumbTop + thumbHeight
                 invalidate()

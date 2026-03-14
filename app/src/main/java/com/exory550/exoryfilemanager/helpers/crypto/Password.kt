@@ -19,7 +19,7 @@ class Password private constructor() {
         fun hashPassword(password: String): String {
             val salt = generateSalt()
             val hash = pbkdf2(password.toCharArray(), salt, PBKDF2_ITERATIONS, HASH_SIZE)
-            return Base64.encodeToString(salt) + ":" + Base64.encodeToString(hash)
+            return Base64.encodeToString(salt, Base64.DEFAULT) + ":" + Base64.encodeToString(hash, Base64.DEFAULT)
         }
 
         fun verifyPassword(password: String, storedHash: String): Boolean {
@@ -106,13 +106,13 @@ class Password private constructor() {
         fun hashWithSha256(input: String): String {
             val digest = MessageDigest.getInstance("SHA-256")
             val hash = digest.digest(input.toByteArray())
-            return Base64.encodeToString(hash)
+            return Base64.encodeToString(hash, Base64.DEFAULT)
         }
 
         fun hashWithSha512(input: String): String {
             val digest = MessageDigest.getInstance("SHA-512")
             val hash = digest.digest(input.toByteArray())
-            return Base64.encodeToString(hash)
+            return Base64.encodeToString(hash, Base64.DEFAULT)
         }
 
         fun hashWithMd5(input: String): String {
