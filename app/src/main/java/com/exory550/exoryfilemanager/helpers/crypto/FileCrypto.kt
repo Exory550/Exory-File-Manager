@@ -28,25 +28,17 @@ class FileCrypto(private val context: Context) {
     }
 
     private val keyStore: KeyStore by lazy {
-        KeyStore.getInstance(ANDROID_KEYSTORE).apply {
-            load(null)
-        }
+        KeyStore.getInstance(ANDROID_KEYSTORE).apply { load(null) }
     }
 
     private val secureRandom = SecureRandom()
 
     fun encryptFile(inputFile: File, outputFile: File, password: String? = null): Boolean {
         return try {
-            val secretKey = if (password != null) {
-                deriveKeyFromPassword(password)
-            } else {
-                getOrCreateSecretKey()
-            }
-
+            val secretKey = if (password != null) deriveKeyFromPassword(password) else getOrCreateSecretKey()
             val cipher = Cipher.getInstance(TRANSFORMATION)
             val iv = ByteArray(IV_SIZE).apply { secureRandom.nextBytes(this) }
             cipher.init(Cipher.ENCRYPT_MODE, secretKey, GCMParameterSpec(GCM_TAG_LENGTH, iv))
-
             FileOutputStream(outputFile).use { fos ->
                 fos.write(iv)
                 FileInputStream(inputFile).use { fis ->
@@ -61,27 +53,17 @@ class FileCrypto(private val context: Context) {
                 }
             }
             true
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
+        } catch (e: Exception) { e.printStackTrace(); false }
     }
 
     fun decryptFile(inputFile: File, outputFile: File, password: String? = null): Boolean {
         return try {
-            val secretKey = if (password != null) {
-                deriveKeyFromPassword(password)
-            } else {
-                getSecretKey()
-            } ?: return false
-
+            val secretKey = if (password != null) deriveKeyFromPassword(password) else getSecretKey() ?: return false
             FileInputStream(inputFile).use { fis ->
                 val iv = ByteArray(IV_SIZE)
                 if (fis.read(iv) != IV_SIZE) return false
-
                 val cipher = Cipher.getInstance(TRANSFORMATION)
                 cipher.init(Cipher.DECRYPT_MODE, secretKey, GCMParameterSpec(GCM_TAG_LENGTH, iv))
-
                 FileOutputStream(outputFile).use { fos ->
                     val cipherInputStream = CipherInputStream(fis, cipher)
                     val buffer = ByteArray(BUFFER_SIZE)
@@ -92,51 +74,28 @@ class FileCrypto(private val context: Context) {
                 }
             }
             true
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
+        } catch (e: Exception) { e.printStackTrace(); false }
     }
 
     fun encryptBytes(data: ByteArray, password: String? = null): ByteArray? {
         return try {
-            val secretKey = if (password != null) {
-                deriveKeyFromPassword(password)
-            } else {
-                getOrCreateSecretKey()
-            }
-
+            val secretKey = if (password != null) deriveKeyFromPassword(password) else getOrCreateSecretKey()
             val cipher = Cipher.getInstance(TRANSFORMATION)
             val iv = ByteArray(IV_SIZE).apply { secureRandom.nextBytes(this) }
             cipher.init(Cipher.ENCRYPT_MODE, secretKey, GCMParameterSpec(GCM_TAG_LENGTH, iv))
-
-            val encryptedData = cipher.doFinal(data)
-            iv + encryptedData
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
-        }
+            iv + cipher.doFinal(data)
+        } catch (e: Exception) { e.printStackTrace(); null }
     }
 
     fun decryptBytes(encryptedData: ByteArray, password: String? = null): ByteArray? {
         return try {
-            val secretKey = if (password != null) {
-                deriveKeyFromPassword(password)
-            } else {
-                getSecretKey()
-            } ?: return null
-
+            val secretKey = if (password != null) deriveKeyFromPassword(password) else getSecretKey() ?: return null
             val iv = encryptedData.copyOfRange(0, IV_SIZE)
             val data = encryptedData.copyOfRange(IV_SIZE, encryptedData.size)
-
             val cipher = Cipher.getInstance(TRANSFORMATION)
             cipher.init(Cipher.DECRYPT_MODE, secretKey, GCMParameterSpec(GCM_TAG_LENGTH, iv))
-
             cipher.doFinal(data)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
-        }
+        } catch (e: Exception) { e.printStackTrace(); null }
     }
 
     private fun getOrCreateSecretKey(): SecretKey {
@@ -148,11 +107,7 @@ class FileCrypto(private val context: Context) {
     }
 
     private fun createSecretKey(): SecretKey {
-        val keyGenerator = KeyGenerator.getInstance(
-            KeyProperties.KEY_ALGORITHM_AES,
-            ANDROID_KEYSTORE
-        )
-
+        val keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, ANDROID_KEYSTORE)
         val builder = KeyGenParameterSpec.Builder(
             AES_KEY_ALIAS,
             KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT
@@ -162,43 +117,33 @@ class FileCrypto(private val context: Context) {
             .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
             .setRandomizedEncryptionRequired(true)
             .setUserAuthenticationRequired(false)
-
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
             builder.setIsStrongBoxBacked(true)
         }
-
         keyGenerator.init(builder.build())
         return keyGenerator.generateKey()
     }
 
     private fun deriveKeyFromPassword(password: String): SecretKey {
-        val bytes = password.toByteArray()
-        val hash = java.security.MessageDigest.getInstance("SHA-256").digest(bytes)
+        val hash = java.security.MessageDigest.getInstance("SHA-256").digest(password.toByteArray())
         return SecretKeySpec(hash, "AES")
     }
 
-    fun deleteKey() {
-        keyStore.deleteEntry(AES_KEY_ALIAS)
-    }
-
-    fun hasKey(): Boolean {
-        return keyStore.containsAlias(AES_KEY_ALIAS)
-    }
+    fun deleteKey() { keyStore.deleteEntry(AES_KEY_ALIAS) }
+    fun hasKey(): Boolean = keyStore.containsAlias(AES_KEY_ALIAS)
 
     fun wipeFile(file: File, passes: Int = 3): Boolean {
         return try {
             if (!file.exists()) return false
-
             val length = file.length()
             val random = SecureRandom()
-
             for (pass in 1..passes) {
                 when (pass) {
                     1 -> {
                         val zeros = ByteArray(BUFFER_SIZE)
                         file.outputStream().use { out ->
                             for (i in 0 until length step BUFFER_SIZE) {
-                                out.write(zeros, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt(), length - i).toInt())
+                                out.write(zeros, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt())
                             }
                         }
                     }
@@ -206,7 +151,7 @@ class FileCrypto(private val context: Context) {
                         val ones = ByteArray(BUFFER_SIZE).apply { fill(0xFF.toByte()) }
                         file.outputStream().use { out ->
                             for (i in 0 until length step BUFFER_SIZE) {
-                                out.write(ones, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt(), length - i).toInt())
+                                out.write(ones, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt())
                             }
                         }
                     }
@@ -215,30 +160,18 @@ class FileCrypto(private val context: Context) {
                         file.outputStream().use { out ->
                             for (i in 0 until length step BUFFER_SIZE) {
                                 random.nextBytes(randomBytes)
-                                out.write(randomBytes, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt(), length - i).toInt())
+                                out.write(randomBytes, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt())
                             }
                         }
                     }
                 }
             }
-
             file.delete()
             true
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
+        } catch (e: Exception) { e.printStackTrace(); false }
     }
 
-    fun secureDelete(file: File): Boolean {
-        return wipeFile(file, 7)
-    }
-
-    fun encryptFileWithPassword(inputFile: File, outputFile: File, password: String): Boolean {
-        return encryptFile(inputFile, outputFile, password)
-    }
-
-    fun decryptFileWithPassword(inputFile: File, outputFile: File, password: String): Boolean {
-        return decryptFile(inputFile, outputFile, password)
-    }
+    fun secureDelete(file: File): Boolean = wipeFile(file, 7)
+    fun encryptFileWithPassword(inputFile: File, outputFile: File, password: String): Boolean = encryptFile(inputFile, outputFile, password)
+    fun decryptFileWithPassword(inputFile: File, outputFile: File, password: String): Boolean = decryptFile(inputFile, outputFile, password)
 }

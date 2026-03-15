@@ -82,12 +82,7 @@ fun Long.toFileSize(context: Context? = null): String {
     return android.text.format.Formatter.formatFileSize(context ?: android.app.Application(), this)
 }
 
-
-
- catch (e: Exception) { toString() }
-}
-
-%"
+fun Int.toPercentage(): String = "${this}%"
 fun Float.toPercentage(): String = String.format("%.1f%%", this)
 
 fun Boolean.toYesNo(context: Context): String =
