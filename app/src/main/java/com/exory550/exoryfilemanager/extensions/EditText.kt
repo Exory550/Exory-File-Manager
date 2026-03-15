@@ -473,12 +473,7 @@ fun TextInputLayout.hasMinLength(minLength: Int): Boolean {
  * Get text from TextView safely
  */
 
-/**
- * Set text with resource formatting
- */
-fun TextView.setTextWithFormat(formatRes: Int, vararg args: Any?) {
-    text = context.getString(formatRes, *args)
-}
+
 
 /**
  * Append line

@@ -198,7 +198,7 @@ class FileCrypto(private val context: Context) {
                         val zeros = ByteArray(BUFFER_SIZE)
                         file.outputStream().use { out ->
                             for (i in 0 until length step BUFFER_SIZE) {
-                                out.write(zeros, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt())
+                                out.write(zeros, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt(), length - i).toInt())
                             }
                         }
                     }
@@ -206,7 +206,7 @@ class FileCrypto(private val context: Context) {
                         val ones = ByteArray(BUFFER_SIZE).apply { fill(0xFF.toByte()) }
                         file.outputStream().use { out ->
                             for (i in 0 until length step BUFFER_SIZE) {
-                                out.write(ones, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt())
+                                out.write(ones, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt(), length - i).toInt())
                             }
                         }
                     }
@@ -215,7 +215,7 @@ class FileCrypto(private val context: Context) {
                         file.outputStream().use { out ->
                             for (i in 0 until length step BUFFER_SIZE) {
                                 random.nextBytes(randomBytes)
-                                out.write(randomBytes, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt())
+                                out.write(randomBytes, 0, minOf(BUFFER_SIZE.toLong(), length - i).toInt(), length - i).toInt())
                             }
                         }
                     }

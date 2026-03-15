@@ -54,7 +54,7 @@ class IntroHidingFragment : Fragment() {
     }
     
     private fun initViews() {
-        ivIcon = binding.ivIcon
+        ivIcon = binding.root.findViewById(android.R.id.icon) ?: binding.root
         ivFile1 = binding.ivFile1
         ivFile2 = binding.ivFile2
         ivFile3 = binding.ivFile3

@@ -82,36 +82,12 @@ fun Long.toFileSize(context: Context? = null): String {
     return android.text.format.Formatter.formatFileSize(context ?: android.app.Application(), this)
 }
 
-fun Long.toTimeString(): String {
-    val seconds = (this / 1000) % 60
-    val minutes = (this / (1000 * 60)) % 60
-    val hours = (this / (1000 * 60 * 60)) % 24
-    return if (hours > 0) String.format("%02d:%02d:%02d", hours, minutes, seconds)
-    else String.format("%02d:%02d", minutes, seconds)
+
+
+ catch (e: Exception) { toString() }
 }
 
-fun Long.toDateString(format: String = "dd/MM/yyyy HH:mm"): String {
-    return try {
-        java.text.SimpleDateFormat(format, java.util.Locale.getDefault()).format(java.util.Date(this))
-    } catch (e: Exception) { toString() }
-}
-
-fun Int.isBetween(min: Int, max: Int): Boolean = this in min..max
-fun Long.isBetween(min: Long, max: Long): Boolean = this in min..max
-
-fun Int.clamp(min: Int, max: Int): Int = when {
-    this < min -> min
-    this > max -> max
-    else -> this
-}
-
-fun Long.clamp(min: Long, max: Long): Long = when {
-    this < min -> min
-    this > max -> max
-    else -> this
-}
-
-fun Int.toPercentage(): String = "${this}%"
+%"
 fun Float.toPercentage(): String = String.format("%.1f%%", this)
 
 fun Boolean.toYesNo(context: Context): String =

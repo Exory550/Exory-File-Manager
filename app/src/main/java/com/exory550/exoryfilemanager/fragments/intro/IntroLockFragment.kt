@@ -52,7 +52,7 @@ class IntroLockFragment : Fragment() {
     }
     
     private fun initViews() {
-        ivIcon = binding.ivIcon
+        ivIcon = binding.root.findViewById(android.R.id.icon) ?: binding.root
         ivLock = binding.ivLock
         ivKey = binding.ivKey
         ivShield = binding.ivShield

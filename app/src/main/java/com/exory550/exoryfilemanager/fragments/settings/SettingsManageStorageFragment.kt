@@ -126,9 +126,9 @@ class SettingsManageStorageFragment : SettingsAbstractFragment() {
     }
 
     private fun showStoragePathDialog() {
-        StoragePickerDialog.showForWriteAccess(requireContext()) { storagePath ->
-            preferenceManager.defaultStoragePath = storagePath
-            defaultPathPreference.summary = storagePath
+        StoragePickerDialog.showForWriteAccess(requireContext()) { path ->
+            preferenceManager.defaultStoragePath = path
+            defaultPathPreference.summary = path
         }
     }
 

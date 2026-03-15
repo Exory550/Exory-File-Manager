@@ -1,5 +1,7 @@
 package com.exory550.exoryfilemanager.extensions
 
+import kotlin.math.roundToInt
+
 import android.graphics.Point
 import android.graphics.PointF
 import android.graphics.Rect

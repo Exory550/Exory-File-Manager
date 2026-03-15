@@ -90,7 +90,7 @@ class ItemsFragment : Fragment() {
         lifecycleScope.launch {
             binding.progressBar.visibility = View.VISIBLE
             binding.recyclerView.visibility = View.GONE
-            binding.emptyView.root.visibility = View.GONE
+            binding.emptyView.visibility = View.GONE
 
             try {
                 val files = withContext(Dispatchers.IO) {
